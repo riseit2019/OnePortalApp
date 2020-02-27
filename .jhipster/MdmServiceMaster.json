@@ -1,0 +1,255 @@
+{
+    "name": "MdmServiceMaster",
+    "fields": [
+        {
+            "fieldName": "serviceCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "organizationName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serviceShortName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serviceName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serviceDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "parentServiceCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "servicePeriodStartDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "servicePeriodEndDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "serviceCategory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serviceLink",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serviceClass",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serviceIntegrationType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serviceType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lookupRoleId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "lookupRole",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lookupSectorId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "lookupSector",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lookupLifeeventId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "lookupLifeevent",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "slaGoal",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "serviceActiveFlag",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updatedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recordInsertTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "sectionDisplayName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sectionDisplayIcon",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rulesetName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "servicePriority",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "serviceChannelAccess",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serviceAccess",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "assistedmodeekycReq",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "assistedOthAdrReq",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "slaDeadline",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "paymentChannelId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "paymentReturnClass",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paymentReturnRuleset",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paymentReturnurl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "helpLink",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "intermediateScreen",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aadhaarRequired",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "meesevaServiceName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pmtFeeAmtTotal",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pmtFeeAmtOthers1",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pmtFeeAmtOthers1Desc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pmtFeeAmtOthers2",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pmtFeeAmtOthers2Desc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pmtFeeAmtOthers3",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pmtFeeAmtOthers3Desc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pmtFeeAmtOthers4",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pmtFeeAmtOthers4Desc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pmtFeeAmtOthers5",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pmtFeeAmtOthers5Desc",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "mdmMeesevaServiceMaster",
+            "otherEntityRelationshipName": "mdmServiceMaster",
+            "relationshipName": "meesevaServiceId",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "mdmOrganizationMaster",
+            "otherEntityRelationshipName": "mdmServiceMaster",
+            "relationshipName": "organizationCode",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20200227104600",
+    "entityTableName": "mdm_service_master",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

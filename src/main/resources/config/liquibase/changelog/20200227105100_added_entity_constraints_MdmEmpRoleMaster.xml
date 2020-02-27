@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity MdmEmpRoleMaster.
+    -->
+    <changeSet id="20200227105100-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="organization_code_id"
+                                 baseTableName="mdm_emp_role_master"
+                                 constraintName="fk_mdm_emp_role_master_organization_code_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="mdm_organization_master"/>
+
+        <addForeignKeyConstraint baseColumnNames="employee_code_id"
+                                 baseTableName="mdm_emp_role_master"
+                                 constraintName="fk_mdm_emp_role_master_employee_code_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="mdm_employee_master"/>
+
+        <addForeignKeyConstraint baseColumnNames="role_code_id"
+                                 baseTableName="mdm_emp_role_master"
+                                 constraintName="fk_mdm_emp_role_master_role_code_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="mdm_role_master"/>
+
+    </changeSet>
+</databaseChangeLog>
