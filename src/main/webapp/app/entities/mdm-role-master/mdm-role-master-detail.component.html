@@ -1,0 +1,98 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mdmRoleMaster">
+            <h2><span jhiTranslate="onePortalApp.mdmRoleMaster.detail.title">Mdm Role Master</span> {{ mdmRoleMaster.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.syspk">Syspk</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.syspk }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.roleCode">Role Code</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.roleCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.roleName">Role Name</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.roleName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.roleDesc">Role Desc</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.roleDesc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.organizationName">Organization Name</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.organizationName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.serviceCode">Service Code</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.serviceCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.serviceName">Service Name</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.serviceName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.locationCode">Location Code</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.locationCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.locationName">Location Name</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.locationName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.roleStatus">Role Status</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.roleStatus }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.updatedBy">Updated By</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.updatedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.recordInsertTime">Record Insert Time</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.recordInsertTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.createTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.updateTime">Update Time</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.updateTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.roleLevelId">Role Level Id</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.roleLevelId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.roleLevelDesc">Role Level Desc</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.roleLevelDesc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleMaster.volunteerSecretariat">Volunteer Secretariat</span></dt>
+                <dd>
+                    <span>{{ mdmRoleMaster.volunteerSecretariat }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/mdm-role-master', mdmRoleMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

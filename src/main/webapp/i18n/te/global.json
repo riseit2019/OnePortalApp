@@ -7,6 +7,15 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "ఎంటిటీలు",
+        "mdmOrganizationMaster": "Mdm Organization Master",
+        "mdmCitizenData": "Mdm Citizen Data",
+        "mdmServiceMaster": "Mdm Service Master",
+        "mdmActivityMaster": "Mdm Activity Master",
+        "mdmEmployeeMaster": "Mdm Employee Master",
+        "mdmMeesevaServiceMaster": "Mdm Meeseva Service Master",
+        "mdmRoleMaster": "Mdm Role Master",
+        "mdmEmpRoleMaster": "Mdm Emp Role Master",
+        "mdmRoleActivityMaster": "Mdm Role Activity Master",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
