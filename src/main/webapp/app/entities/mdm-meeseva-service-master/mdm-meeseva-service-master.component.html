@@ -1,0 +1,129 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.home.title">Mdm Meeseva Service Masters</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-mdm-meeseva-service-master" [routerLink]="['/mdm-meeseva-service-master/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.home.createLabel">
+            Create a new Mdm Meeseva Service Master
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="mdmMeesevaServiceMasters?.length === 0">
+        <span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.home.notFound">No mdmMeesevaServiceMasters found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="mdmMeesevaServiceMasters?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.syspk">Syspk</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceName">Meeseva Service Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.isCharged">Is Charged</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.organizationEntityTypeCode">Organization Entity Type Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.applicationTable">Application Table</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.applicationObject">Application Object</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.customerDefaultFlag">Customer Default Flag</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.channelDefaultFlag">Channel Default Flag</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.serviceUrl">Service Url</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.backOfficeUrl">Back Office Url</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.packageId">Package Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceActiveFlag">Meeseva Service Active Flag</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceGroupId">Meeseva Service Group Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceSubGroupId">Meeseva Service Sub Group Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceTypeId">Meeseva Service Type Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceSubTypeId">Meeseva Service Sub Type Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.departmentCode">Department Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.efmsDepartmentCode">Efms Department Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.isOnline">Is Online</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.agencyType">Agency Type</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.launchDate">Launch Date</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.isMobile">Is Mobile</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.innerSubId">Inner Sub Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.digilockerEnabled">Digilocker Enabled</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.isRegular">Is Regular</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.isSeasonal">Is Seasonal</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.citizenPortalLaunchDate">Citizen Portal Launch Date</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.createdBy">Created By</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.updatedBy">Updated By</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.recordInsertTime">Record Insert Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.createTime">Create Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.updateTime">Update Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceId">Meeseva Service Id</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mdmMeesevaServiceMaster of mdmMeesevaServiceMasters ;trackBy: trackId">
+                    <td><a [routerLink]="['/mdm-meeseva-service-master', mdmMeesevaServiceMaster.id, 'view']">{{ mdmMeesevaServiceMaster.id }}</a></td>
+                    <td>{{ mdmMeesevaServiceMaster.syspk }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.meesevaServiceName }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.isCharged }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.organizationEntityTypeCode }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.applicationTable }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.applicationObject }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.customerDefaultFlag }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.channelDefaultFlag }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.serviceUrl }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.backOfficeUrl }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.packageId }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.meesevaServiceActiveFlag }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.meesevaServiceGroupId }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.meesevaServiceSubGroupId }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.meesevaServiceTypeId }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.meesevaServiceSubTypeId }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.departmentCode }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.efmsDepartmentCode }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.isOnline }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.agencyType }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.launchDate | date:'medium' }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.isMobile }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.innerSubId }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.digilockerEnabled }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.isRegular }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.isSeasonal }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.citizenPortalLaunchDate | date:'medium' }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.createdBy }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.updatedBy }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.recordInsertTime | date:'medium' }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.createTime | date:'medium' }}</td>
+                    <td>{{ mdmMeesevaServiceMaster.updateTime | date:'medium' }}</td>
+                    <td>
+                        <div *ngIf="mdmMeesevaServiceMaster.meesevaServiceId">
+                            <a [routerLink]="['/mdm-service-master', mdmMeesevaServiceMaster.meesevaServiceId?.id, 'view']" >{{ mdmMeesevaServiceMaster.meesevaServiceId?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/mdm-meeseva-service-master', mdmMeesevaServiceMaster.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/mdm-meeseva-service-master', mdmMeesevaServiceMaster.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(mdmMeesevaServiceMaster)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,213 @@
+{
+    "name": "MdmEmployeeMaster",
+    "fields": [
+        {
+            "fieldName": "syspk",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "employeeCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "tempRefId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "employeeId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "employeeName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "entityName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "organizationName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "designationId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "designationName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "postName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "organizationUnitName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "parentOrganizationUnit",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mobileNumber",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "emailId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "addressType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cityName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "postOffice",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isPrimary",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isOuHead",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "districtCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "districtName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mandalCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mandalName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "villageCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "villageName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "panchayatCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "panchayatName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "constituencyCode",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "constituencyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updatedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recordInsertTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "employeeType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "managerEmployeeCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "employeeActiveStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "personId1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aadhaarRefId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "volunteerSecretariatId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "volunteerSecretariatFlag",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aadhaarNumber",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "mdmOrganizationMaster",
+            "otherEntityRelationshipName": "organizationCode",
+            "relationshipName": "organizationCode",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "mdmCitizenData",
+            "otherEntityRelationshipName": "personId",
+            "relationshipName": "personId",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200227160400",
+    "entityTableName": "mdm_employee_master",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
