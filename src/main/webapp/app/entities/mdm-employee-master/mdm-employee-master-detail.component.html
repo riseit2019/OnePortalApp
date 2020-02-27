@@ -1,0 +1,214 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mdmEmployeeMaster">
+            <h2><span jhiTranslate="onePortalApp.mdmEmployeeMaster.detail.title">Mdm Employee Master</span> {{ mdmEmployeeMaster.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.syspk">Syspk</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.syspk }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.employeeCode">Employee Code</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.employeeCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.tempRefId">Temp Ref Id</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.tempRefId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.employeeId">Employee Id</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.employeeId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.employeeName">Employee Name</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.employeeName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.entityName">Entity Name</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.entityName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.organizationName">Organization Name</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.organizationName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.designationId">Designation Id</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.designationId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.designationName">Designation Name</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.designationName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.postName">Post Name</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.postName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.organizationUnitName">Organization Unit Name</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.organizationUnitName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.parentOrganizationUnit">Parent Organization Unit</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.parentOrganizationUnit }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.mobileNumber">Mobile Number</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.mobileNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.emailId">Email Id</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.emailId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.addressType">Address Type</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.addressType }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.address1">Address 1</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.address1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.address2">Address 2</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.address2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.cityName">City Name</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.cityName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.postOffice">Post Office</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.postOffice }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.isPrimary">Is Primary</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.isPrimary }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.isOuHead">Is Ou Head</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.isOuHead }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.districtCode">District Code</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.districtCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.districtName">District Name</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.districtName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.mandalCode">Mandal Code</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.mandalCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.mandalName">Mandal Name</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.mandalName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.villageCode">Village Code</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.villageCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.villageName">Village Name</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.villageName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.panchayatCode">Panchayat Code</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.panchayatCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.panchayatName">Panchayat Name</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.panchayatName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.constituencyCode">Constituency Code</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.constituencyCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.constituencyName">Constituency Name</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.constituencyName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.updatedBy">Updated By</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.updatedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.recordInsertTime">Record Insert Time</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.recordInsertTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.createTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.updateTime">Update Time</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.updateTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.employeeType">Employee Type</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.employeeType }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.managerEmployeeCode">Manager Employee Code</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.managerEmployeeCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.employeeActiveStatus">Employee Active Status</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.employeeActiveStatus }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.personId1">Person Id 1</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.personId1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.aadhaarRefId">Aadhaar Ref Id</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.aadhaarRefId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.volunteerSecretariatId">Volunteer Secretariat Id</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.volunteerSecretariatId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.volunteerSecretariatFlag">Volunteer Secretariat Flag</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.volunteerSecretariatFlag }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.aadhaarNumber">Aadhaar Number</span></dt>
+                <dd>
+                    <span>{{ mdmEmployeeMaster.aadhaarNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.organizationCode">Organization Code</span></dt>
+                <dd>
+                    <div *ngIf="mdmEmployeeMaster.organizationCode">
+                        <a [routerLink]="['/mdm-organization-master', mdmEmployeeMaster.organizationCode?.id, 'view']">{{ mdmEmployeeMaster.organizationCode?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmEmployeeMaster.personId">Person Id</span></dt>
+                <dd>
+                    <div *ngIf="mdmEmployeeMaster.personId">
+                        <a [routerLink]="['/mdm-citizen-data', mdmEmployeeMaster.personId?.id, 'view']">{{ mdmEmployeeMaster.personId?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/mdm-employee-master', mdmEmployeeMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

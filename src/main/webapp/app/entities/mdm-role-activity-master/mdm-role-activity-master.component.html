@@ -1,0 +1,95 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="onePortalApp.mdmRoleActivityMaster.home.title">Mdm Role Activity Masters</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-mdm-role-activity-master" [routerLink]="['/mdm-role-activity-master/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="onePortalApp.mdmRoleActivityMaster.home.createLabel">
+            Create a new Mdm Role Activity Master
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="mdmRoleActivityMasters?.length === 0">
+        <span jhiTranslate="onePortalApp.mdmRoleActivityMaster.home.notFound">No mdmRoleActivityMasters found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="mdmRoleActivityMasters?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.syspk">Syspk</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.activityCode">Activity Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.activityName">Activity Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.activityLevelId">Activity Level Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.activityLevelDesc">Activity Level Desc</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.roleCode">Role Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.roleName">Role Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.roleLevelId">Role Level Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.roleLevelDesc">Role Level Desc</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.roleActivityStatus">Role Activity Status</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.createdBy">Created By</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.updatedBy">Updated By</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.recordInsertTime">Record Insert Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.createTime">Create Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.updateTime">Update Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.organizationCode">Organization Code</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mdmRoleActivityMaster of mdmRoleActivityMasters ;trackBy: trackId">
+                    <td><a [routerLink]="['/mdm-role-activity-master', mdmRoleActivityMaster.id, 'view']">{{ mdmRoleActivityMaster.id }}</a></td>
+                    <td>{{ mdmRoleActivityMaster.syspk }}</td>
+                    <td>{{ mdmRoleActivityMaster.activityCode }}</td>
+                    <td>{{ mdmRoleActivityMaster.activityName }}</td>
+                    <td>{{ mdmRoleActivityMaster.activityLevelId }}</td>
+                    <td>{{ mdmRoleActivityMaster.activityLevelDesc }}</td>
+                    <td>{{ mdmRoleActivityMaster.roleCode }}</td>
+                    <td>{{ mdmRoleActivityMaster.roleName }}</td>
+                    <td>{{ mdmRoleActivityMaster.roleLevelId }}</td>
+                    <td>{{ mdmRoleActivityMaster.roleLevelDesc }}</td>
+                    <td>{{ mdmRoleActivityMaster.roleActivityStatus }}</td>
+                    <td>{{ mdmRoleActivityMaster.createdBy }}</td>
+                    <td>{{ mdmRoleActivityMaster.updatedBy }}</td>
+                    <td>{{ mdmRoleActivityMaster.recordInsertTime | date:'medium' }}</td>
+                    <td>{{ mdmRoleActivityMaster.createTime | date:'medium' }}</td>
+                    <td>{{ mdmRoleActivityMaster.updateTime | date:'medium' }}</td>
+                    <td>
+                        <div *ngIf="mdmRoleActivityMaster.organizationCode">
+                            <a [routerLink]="['/mdm-organization-master', mdmRoleActivityMaster.organizationCode?.id, 'view']" >{{ mdmRoleActivityMaster.organizationCode?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/mdm-role-activity-master', mdmRoleActivityMaster.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/mdm-role-activity-master', mdmRoleActivityMaster.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(mdmRoleActivityMaster)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
