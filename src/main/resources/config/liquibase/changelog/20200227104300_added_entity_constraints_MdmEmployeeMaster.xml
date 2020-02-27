@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity MdmEmployeeMaster.
+    -->
+    <changeSet id="20200227104300-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="organization_code_id"
+                                 baseTableName="mdm_employee_master"
+                                 constraintName="fk_mdm_employee_master_organization_code_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="mdm_organization_master"/>
+
+        <addForeignKeyConstraint baseColumnNames="person_id_id"
+                                 baseTableName="mdm_employee_master"
+                                 constraintName="fk_mdm_employee_master_person_id_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="mdm_citizen_data"/>
+
+    </changeSet>
+</databaseChangeLog>
