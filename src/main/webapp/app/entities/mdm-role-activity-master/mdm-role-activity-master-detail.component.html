@@ -1,0 +1,88 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mdmRoleActivityMaster">
+            <h2><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.detail.title">Mdm Role Activity Master</span> {{ mdmRoleActivityMaster.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.activityCode">Activity Code</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.activityCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.activityName">Activity Name</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.activityName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.activityLevelId">Activity Level Id</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.activityLevelId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.activityLevelDesc">Activity Level Desc</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.activityLevelDesc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.roleCode">Role Code</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.roleCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.roleName">Role Name</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.roleName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.roleLevelId">Role Level Id</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.roleLevelId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.roleLevelDesc">Role Level Desc</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.roleLevelDesc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.roleActivityStatus">Role Activity Status</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.roleActivityStatus }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.updatedBy">Updated By</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.updatedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.recordInsertTime">Record Insert Time</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.recordInsertTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.createTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.updateTime">Update Time</span></dt>
+                <dd>
+                    <span>{{ mdmRoleActivityMaster.updateTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmRoleActivityMaster.organizationCode">Organization Code</span></dt>
+                <dd>
+                    <div *ngIf="mdmRoleActivityMaster.organizationCode">
+                        <a [routerLink]="['/mdm-organization-master', mdmRoleActivityMaster.organizationCode?.id, 'view']">{{ mdmRoleActivityMaster.organizationCode?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/mdm-role-activity-master', mdmRoleActivityMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
