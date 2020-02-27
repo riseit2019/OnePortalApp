@@ -1,0 +1,97 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="onePortalApp.mdmActivityMaster.home.title">Mdm Activity Masters</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-mdm-activity-master" [routerLink]="['/mdm-activity-master/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="onePortalApp.mdmActivityMaster.home.createLabel">
+            Create a new Mdm Activity Master
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="mdmActivityMasters?.length === 0">
+        <span jhiTranslate="onePortalApp.mdmActivityMaster.home.notFound">No mdmActivityMasters found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="mdmActivityMasters?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.activityCode">Activity Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.activityName">Activity Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.activityDesc">Activity Desc</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.activityLevelId">Activity Level Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.activityLevelDesc">Activity Level Desc</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.organizationCode">Organization Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.organizationName">Organization Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.activityStatus">Activity Status</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.createdBy">Created By</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.updatedBy">Updated By</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.recordInsertTime">Record Insert Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.createTime">Create Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.updateTime">Update Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.organizationCode">Organization Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmActivityMaster.organizationCode">Organization Code</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mdmActivityMaster of mdmActivityMasters ;trackBy: trackId">
+                    <td><a [routerLink]="['/mdm-activity-master', mdmActivityMaster.id, 'view']">{{ mdmActivityMaster.id }}</a></td>
+                    <td>{{ mdmActivityMaster.activityCode }}</td>
+                    <td>{{ mdmActivityMaster.activityName }}</td>
+                    <td>{{ mdmActivityMaster.activityDesc }}</td>
+                    <td>{{ mdmActivityMaster.activityLevelId }}</td>
+                    <td>{{ mdmActivityMaster.activityLevelDesc }}</td>
+                    <td>{{ mdmActivityMaster.organizationCode }}</td>
+                    <td>{{ mdmActivityMaster.organizationName }}</td>
+                    <td>{{ mdmActivityMaster.activityStatus }}</td>
+                    <td>{{ mdmActivityMaster.createdBy }}</td>
+                    <td>{{ mdmActivityMaster.updatedBy }}</td>
+                    <td>{{ mdmActivityMaster.recordInsertTime | date:'medium' }}</td>
+                    <td>{{ mdmActivityMaster.createTime | date:'medium' }}</td>
+                    <td>{{ mdmActivityMaster.updateTime | date:'medium' }}</td>
+                    <td>
+                        <div *ngIf="mdmActivityMaster.organizationCode">
+                            <a [routerLink]="['/mdm-organization-master', mdmActivityMaster.organizationCode?.id, 'view']" >{{ mdmActivityMaster.organizationCode?.id }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="mdmActivityMaster.organizationCode">
+                            <a [routerLink]="['/mdm-organization-master', mdmActivityMaster.organizationCode?.id, 'view']" >{{ mdmActivityMaster.organizationCode?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/mdm-activity-master', mdmActivityMaster.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/mdm-activity-master', mdmActivityMaster.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(mdmActivityMaster)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

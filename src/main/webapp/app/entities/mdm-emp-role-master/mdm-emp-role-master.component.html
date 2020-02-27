@@ -1,0 +1,133 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="onePortalApp.mdmEmpRoleMaster.home.title">Mdm Emp Role Masters</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-mdm-emp-role-master" [routerLink]="['/mdm-emp-role-master/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="onePortalApp.mdmEmpRoleMaster.home.createLabel">
+            Create a new Mdm Emp Role Master
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="mdmEmpRoleMasters?.length === 0">
+        <span jhiTranslate="onePortalApp.mdmEmpRoleMaster.home.notFound">No mdmEmpRoleMasters found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="mdmEmpRoleMasters?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.employeeCode">Employee Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.employeeName">Employee Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.roleCode">Role Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.roleName">Role Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.officeCode">Office Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.officeName">Office Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.personId">Person Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.organizationCode">Organization Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.organizationName">Organization Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.stateCode">State Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.stateName">State Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.districtCode">District Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.districtName">District Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.mandalCode">Mandal Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.mandalName">Mandal Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.villageCode">Village Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.villageName">Village Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.circleName">Circle Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.divisionName">Division Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.subDivisionName">Sub Division Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.sectionName">Section Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.activeStatusFlag">Active Status Flag</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.createdBy">Created By</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.updatedBy">Updated By</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.recordInsertTime">Record Insert Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.createTime">Create Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.updateTime">Update Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.volunteerSecretariatRole">Volunteer Secretariat Role</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.organizationCode">Organization Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.employeeCode">Employee Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmpRoleMaster.roleCode">Role Code</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mdmEmpRoleMaster of mdmEmpRoleMasters ;trackBy: trackId">
+                    <td><a [routerLink]="['/mdm-emp-role-master', mdmEmpRoleMaster.id, 'view']">{{ mdmEmpRoleMaster.id }}</a></td>
+                    <td>{{ mdmEmpRoleMaster.employeeCode }}</td>
+                    <td>{{ mdmEmpRoleMaster.employeeName }}</td>
+                    <td>{{ mdmEmpRoleMaster.roleCode }}</td>
+                    <td>{{ mdmEmpRoleMaster.roleName }}</td>
+                    <td>{{ mdmEmpRoleMaster.officeCode }}</td>
+                    <td>{{ mdmEmpRoleMaster.officeName }}</td>
+                    <td>{{ mdmEmpRoleMaster.personId }}</td>
+                    <td>{{ mdmEmpRoleMaster.organizationCode }}</td>
+                    <td>{{ mdmEmpRoleMaster.organizationName }}</td>
+                    <td>{{ mdmEmpRoleMaster.stateCode }}</td>
+                    <td>{{ mdmEmpRoleMaster.stateName }}</td>
+                    <td>{{ mdmEmpRoleMaster.districtCode }}</td>
+                    <td>{{ mdmEmpRoleMaster.districtName }}</td>
+                    <td>{{ mdmEmpRoleMaster.mandalCode }}</td>
+                    <td>{{ mdmEmpRoleMaster.mandalName }}</td>
+                    <td>{{ mdmEmpRoleMaster.villageCode }}</td>
+                    <td>{{ mdmEmpRoleMaster.villageName }}</td>
+                    <td>{{ mdmEmpRoleMaster.circleName }}</td>
+                    <td>{{ mdmEmpRoleMaster.divisionName }}</td>
+                    <td>{{ mdmEmpRoleMaster.subDivisionName }}</td>
+                    <td>{{ mdmEmpRoleMaster.sectionName }}</td>
+                    <td>{{ mdmEmpRoleMaster.activeStatusFlag }}</td>
+                    <td>{{ mdmEmpRoleMaster.createdBy }}</td>
+                    <td>{{ mdmEmpRoleMaster.updatedBy }}</td>
+                    <td>{{ mdmEmpRoleMaster.recordInsertTime | date:'medium' }}</td>
+                    <td>{{ mdmEmpRoleMaster.createTime | date:'medium' }}</td>
+                    <td>{{ mdmEmpRoleMaster.updateTime | date:'medium' }}</td>
+                    <td>{{ mdmEmpRoleMaster.volunteerSecretariatRole }}</td>
+                    <td>
+                        <div *ngIf="mdmEmpRoleMaster.organizationCode">
+                            <a [routerLink]="['/mdm-organization-master', mdmEmpRoleMaster.organizationCode?.id, 'view']" >{{ mdmEmpRoleMaster.organizationCode?.id }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="mdmEmpRoleMaster.employeeCode">
+                            <a [routerLink]="['/mdm-employee-master', mdmEmpRoleMaster.employeeCode?.id, 'view']" >{{ mdmEmpRoleMaster.employeeCode?.id }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="mdmEmpRoleMaster.roleCode">
+                            <a [routerLink]="['/mdm-role-master', mdmEmpRoleMaster.roleCode?.id, 'view']" >{{ mdmEmpRoleMaster.roleCode?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/mdm-emp-role-master', mdmEmpRoleMaster.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/mdm-emp-role-master', mdmEmpRoleMaster.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(mdmEmpRoleMaster)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

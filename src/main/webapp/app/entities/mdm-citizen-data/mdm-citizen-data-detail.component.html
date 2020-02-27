@@ -1,0 +1,338 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mdmCitizenData">
+            <h2><span jhiTranslate="onePortalApp.mdmCitizenData.detail.title">Mdm Citizen Data</span> {{ mdmCitizenData.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.personId">Person Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.personId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.tempRefId">Temp Ref Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.tempRefId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.name">Name</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.emailId">Email Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.emailId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.mobileNumber">Mobile Number</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.mobileNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.dateOfBirth">Date Of Birth</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.dateOfBirth }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.genderId">Gender Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.genderId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.gender">Gender</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.gender }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.houseNumberAdh">House Number Adh</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.houseNumberAdh }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.streetAdh">Street Adh</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.streetAdh }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.villageAdh">Village Adh</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.villageAdh }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.districtNameAh">District Name Ah</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.districtNameAh }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.subDistrictNameAdh">Sub District Name Adh</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.subDistrictNameAdh }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.postOfficeAdh">Post Office Adh</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.postOfficeAdh }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.stateNameAdh">State Name Adh</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.stateNameAdh }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.pinCodeAdh">Pin Code Adh</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.pinCodeAdh }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.districtCodePss">District Code Pss</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.districtCodePss }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.districtNamePss">District Name Pss</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.districtNamePss }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.districtCode">District Code</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.districtCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.mandalCode">Mandal Code</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.mandalCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.villageCode">Village Code</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.villageCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.districtName">District Name</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.districtName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.mandalName">Mandal Name</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.mandalName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.villageName">Village Name</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.villageName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.houseHoldId">House Hold Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.houseHoldId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.relationshipWithHoh">Relationship With Hoh</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.relationshipWithHoh }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.buildingNamePss">Building Name Pss</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.buildingNamePss }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.houseNameWardNoDivPss">House Name Ward No Div Pss</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.houseNameWardNoDivPss }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.areaWardColonyStreetPss">Area Ward Colony Street Pss</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.areaWardColonyStreetPss }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.villageTownPss">Village Town Pss</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.villageTownPss }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.pinCodePss">Pin Code Pss</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.pinCodePss }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.religionId">Religion Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.religionId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.religion">Religion</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.religion }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.casteId">Caste Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.casteId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.caste">Caste</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.caste }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.subCasteId">Sub Caste Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.subCasteId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.subCaste">Sub Caste</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.subCaste }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.motherTongueId">Mother Tongue Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.motherTongueId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.motherTongue">Mother Tongue</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.motherTongue }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.householdOwnershipId">Household Ownership Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.householdOwnershipId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.householdOwnership">Household Ownership</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.householdOwnership }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.educationId">Education Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.educationId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.education">Education</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.education }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.occupationId">Occupation Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.occupationId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.occupation">Occupation</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.occupation }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.occupationCategoryId">Occupation Category Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.occupationCategoryId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.occupationCategory">Occupation Category</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.occupationCategory }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.martialStatusId">Martial Status Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.martialStatusId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.martialStatus">Martial Status</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.martialStatus }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.physicalhandicappedTypeId">Physicalhandicapped Type Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.physicalhandicappedTypeId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.physicalhandicappedStatus">Physicalhandicapped Status</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.physicalhandicappedStatus }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.physicalhandicappedPercentage">Physicalhandicapped Percentage</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.physicalhandicappedPercentage }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.votersCardNo">Voters Card No</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.votersCardNo }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.kissanCardAvailable">Kissan Card Available</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.kissanCardAvailable }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.annualIncome">Annual Income</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.annualIncome }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.rationId">Ration Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.rationId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.updatedBy">Updated By</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.updatedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.recordInsertTime">Record Insert Time</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.recordInsertTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.createTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.updateTime">Update Time</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.updateTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.aadhaarVerified">Aadhaar Verified</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.aadhaarVerified }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.aadhaarVerifiedDate">Aadhaar Verified Date</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.aadhaarVerifiedDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.emailVerified">Email Verified</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.emailVerified }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.phoneNoVerified">Phone No Verified</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.phoneNoVerified }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.citizenActiveStatus">Citizen Active Status</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.citizenActiveStatus }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.sourceOfRegistrationId">Source Of Registration Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.sourceOfRegistrationId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.sourceOfRegistration">Source Of Registration</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.sourceOfRegistration }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.ssoId">Sso Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.ssoId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.operatorId">Operator Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.operatorId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.aadhaarRefId">Aadhaar Ref Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.aadhaarRefId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.careOfAdh">Care Of Adh</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.careOfAdh }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.assistedModeOperatorId">Assisted Mode Operator Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.assistedModeOperatorId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.uidReferenceKeyAponline">Uid Reference Key Aponline</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.uidReferenceKeyAponline }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.uidToken">Uid Token</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.uidToken }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.volunteerSecretariatEmailId">Volunteer Secretariat Email Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.volunteerSecretariatEmailId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.volunteerSecretariatMobile">Volunteer Secretariat Mobile</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.volunteerSecretariatMobile }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmCitizenData.volunteerSecretariatId">Volunteer Secretariat Id</span></dt>
+                <dd>
+                    <span>{{ mdmCitizenData.volunteerSecretariatId }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/mdm-citizen-data', mdmCitizenData.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

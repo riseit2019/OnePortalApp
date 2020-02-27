@@ -1,0 +1,36 @@
+{
+  "onePortalApp": {
+    "mdmActivityMaster": {
+      "home": {
+        "title": "Mdm Activity Masters",
+        "createLabel": "Create a new Mdm Activity Master",
+        "createOrEditLabel": "Create or edit a Mdm Activity Master",
+        "notFound": "No Mdm Activity Masters found"
+      },
+      "created": "A new Mdm Activity Master is created with identifier {{ param }}",
+      "updated": "A Mdm Activity Master is updated with identifier {{ param }}",
+      "deleted": "A Mdm Activity Master is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mdm Activity Master {{ id }}?"
+      },
+      "detail": {
+        "title": "Mdm Activity Master"
+      },
+      "activityCode": "Activity Code",
+      "activityName": "Activity Name",
+      "activityDesc": "Activity Desc",
+      "activityLevelId": "Activity Level Id",
+      "activityLevelDesc": "Activity Level Desc",
+      "organizationCode": "Organization Code",
+      "organizationName": "Organization Name",
+      "activityStatus": "Activity Status",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "recordInsertTime": "Record Insert Time",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "organizationCode": "Organization Code",
+      "organizationCode": "Organization Code"
+    }
+  }
+}
