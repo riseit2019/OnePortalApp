@@ -1,0 +1,11 @@
+version: '2'
+services:
+  oneportalapp-postgresql:
+    image: postgres:12.1
+    # volumes:
+    #     - ~/volumes/jhipster/OnePortalApp/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=OnePortalApp
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
