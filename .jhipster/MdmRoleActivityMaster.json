@@ -1,0 +1,92 @@
+{
+    "name": "MdmRoleActivityMaster",
+    "fields": [
+        {
+            "fieldName": "activityCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "activityName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "activityLevelId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "activityLevelDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "roleCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "roleName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "roleLevelId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "roleLevelDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "roleActivityStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updatedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recordInsertTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mdmOrganizationMaster",
+            "otherEntityRelationshipName": "mdmRoleActivityMaster",
+            "relationshipName": "organizationCode",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200227103300",
+    "entityTableName": "mdm_role_activity_master",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
