@@ -1,0 +1,349 @@
+{
+    "name": "MdmCitizenData",
+    "fields": [
+        {
+            "fieldName": "syspk",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "personId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "tempRefId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "emailId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mobileNumber",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dateOfBirth",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "genderId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "houseNumberAdh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "streetAdh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "villageAdh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "districtNameAh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "subDistrictNameAdh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "postOfficeAdh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stateNameAdh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pinCodeAdh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "districtCodePss",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "districtNamePss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "districtCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mandalCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "villageCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "districtName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mandalName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "villageName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "houseHoldId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "relationshipWithHoh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "buildingNamePss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "houseNameWardNoDivPss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "areaWardColonyStreetPss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "villageTownPss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pinCodePss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "religionId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "religion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "casteId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "caste",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "subCasteId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "subCaste",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "motherTongueId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "motherTongue",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "householdOwnershipId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "householdOwnership",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "educationId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "education",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "occupationId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "occupation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "occupationCategoryId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "occupationCategory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "martialStatusId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "martialStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "physicalhandicappedTypeId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "physicalhandicappedStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "physicalhandicappedPercentage",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "votersCardNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "kissanCardAvailable",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "annualIncome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rationId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updatedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recordInsertTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "aadhaarVerified",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aadhaarVerifiedDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "emailVerified",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNoVerified",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "citizenActiveStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sourceOfRegistrationId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sourceOfRegistration",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ssoId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "operatorId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "aadhaarRefId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "careOfAdh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "assistedModeOperatorId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "uidReferenceKeyAponline",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "uidToken",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "volunteerSecretariatEmailId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "volunteerSecretariatMobile",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "volunteerSecretariatId",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "mdmEmployeeMaster",
+            "otherEntityRelationshipName": "personId",
+            "relationshipName": "personId",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200227130900",
+    "entityTableName": "mdm_citizen_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
