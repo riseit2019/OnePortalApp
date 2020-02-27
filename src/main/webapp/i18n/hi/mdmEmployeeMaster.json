@@ -1,0 +1,66 @@
+{
+  "onePortalApp": {
+    "mdmEmployeeMaster": {
+      "home": {
+        "title": "MdmEmployeeMasters",
+        "createLabel": "नया Mdm Employee Master बनाएँ",
+        "createOrEditLabel": "Mdm Employee Master बनाएँ या संपादित करें",
+        "notFound": "No Mdm Employee Masters found"
+      },
+      "created": "एक नया Mdm Employee Master [identifier: {{ param }}] तैयार है",
+      "updated": "एक Mdm Employee Master [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Mdm Employee Master [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Mdm Employee Master [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Mdm Employee Master"
+      },
+      "employeeCode": "Employee Code",
+      "tempRefId": "Temp Ref Id",
+      "employeeId": "Employee Id",
+      "employeeName": "Employee Name",
+      "entityName": "Entity Name",
+      "organizationName": "Organization Name",
+      "designationId": "Designation Id",
+      "designationName": "Designation Name",
+      "postName": "Post Name",
+      "organizationUnitName": "Organization Unit Name",
+      "parentOrganizationUnit": "Parent Organization Unit",
+      "mobileNumber": "Mobile Number",
+      "emailId": "Email Id",
+      "addressType": "Address Type",
+      "address1": "Address 1",
+      "address2": "Address 2",
+      "cityName": "City Name",
+      "postOffice": "Post Office",
+      "isPrimary": "Is Primary",
+      "isOuHead": "Is Ou Head",
+      "districtCode": "District Code",
+      "districtName": "District Name",
+      "mandalCode": "Mandal Code",
+      "mandalName": "Mandal Name",
+      "villageCode": "Village Code",
+      "villageName": "Village Name",
+      "panchayatCode": "Panchayat Code",
+      "panchayatName": "Panchayat Name",
+      "constituencyCode": "Constituency Code",
+      "constituencyName": "Constituency Name",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "recordInsertTime": "Record Insert Time",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "employeeType": "Employee Type",
+      "managerEmployeeCode": "Manager Employee Code",
+      "employeeActiveStatus": "Employee Active Status",
+      "personId1": "Person Id 1",
+      "aadhaarRefId": "Aadhaar Ref Id",
+      "volunteerSecretariatId": "Volunteer Secretariat Id",
+      "volunteerSecretariatFlag": "Volunteer Secretariat Flag",
+      "aadhaarNumber": "Aadhaar Number",
+      "organizationCode": "Organization Code",
+      "personId": "Person Id"
+    }
+  }
+}

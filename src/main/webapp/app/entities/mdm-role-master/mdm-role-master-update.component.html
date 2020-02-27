@@ -1,0 +1,137 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-mdm-role-master-heading" jhiTranslate="onePortalApp.mdmRoleMaster.home.createOrEditLabel">Create or edit a Mdm Role Master</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.roleCode" for="field_roleCode">Role Code</label>
+                    <input type="text" class="form-control" name="roleCode" id="field_roleCode"
+                           formControlName="roleCode"/>
+                    <div *ngIf="editForm.get('roleCode')!.invalid && (editForm.get('roleCode')!.dirty || editForm.get('roleCode')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('roleCode')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.roleName" for="field_roleName">Role Name</label>
+                    <input type="text" class="form-control" name="roleName" id="field_roleName"
+                           formControlName="roleName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.roleDesc" for="field_roleDesc">Role Desc</label>
+                    <input type="text" class="form-control" name="roleDesc" id="field_roleDesc"
+                           formControlName="roleDesc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.organizationName" for="field_organizationName">Organization Name</label>
+                    <input type="text" class="form-control" name="organizationName" id="field_organizationName"
+                           formControlName="organizationName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.serviceCode" for="field_serviceCode">Service Code</label>
+                    <input type="text" class="form-control" name="serviceCode" id="field_serviceCode"
+                           formControlName="serviceCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.serviceName" for="field_serviceName">Service Name</label>
+                    <input type="text" class="form-control" name="serviceName" id="field_serviceName"
+                           formControlName="serviceName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.locationCode" for="field_locationCode">Location Code</label>
+                    <input type="text" class="form-control" name="locationCode" id="field_locationCode"
+                           formControlName="locationCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.locationName" for="field_locationName">Location Name</label>
+                    <input type="text" class="form-control" name="locationName" id="field_locationName"
+                           formControlName="locationName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.roleStatus" for="field_roleStatus">Role Status</label>
+                    <input type="text" class="form-control" name="roleStatus" id="field_roleStatus"
+                           formControlName="roleStatus"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.createdBy" for="field_createdBy">Created By</label>
+                    <input type="text" class="form-control" name="createdBy" id="field_createdBy"
+                           formControlName="createdBy"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.updatedBy" for="field_updatedBy">Updated By</label>
+                    <input type="text" class="form-control" name="updatedBy" id="field_updatedBy"
+                           formControlName="updatedBy"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.recordInsertTime" for="field_recordInsertTime">Record Insert Time</label>
+                    <div class="d-flex">
+                        <input id="field_recordInsertTime" type="datetime-local" class="form-control" name="recordInsertTime" formControlName="recordInsertTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" formControlName="createTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.updateTime" for="field_updateTime">Update Time</label>
+                    <div class="d-flex">
+                        <input id="field_updateTime" type="datetime-local" class="form-control" name="updateTime" formControlName="updateTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.roleLevelId" for="field_roleLevelId">Role Level Id</label>
+                    <input type="number" class="form-control" name="roleLevelId" id="field_roleLevelId"
+                           formControlName="roleLevelId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.roleLevelDesc" for="field_roleLevelDesc">Role Level Desc</label>
+                    <input type="text" class="form-control" name="roleLevelDesc" id="field_roleLevelDesc"
+                           formControlName="roleLevelDesc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmRoleMaster.volunteerSecretariat" for="field_volunteerSecretariat">Volunteer Secretariat</label>
+                    <input type="text" class="form-control" name="volunteerSecretariat" id="field_volunteerSecretariat"
+                           formControlName="volunteerSecretariat"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

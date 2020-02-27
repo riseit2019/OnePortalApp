@@ -1,0 +1,34 @@
+{
+  "onePortalApp": {
+    "mdmActivityMaster": {
+      "home": {
+        "title": "MdmActivityMasters",
+        "createLabel": "नया Mdm Activity Master बनाएँ",
+        "createOrEditLabel": "Mdm Activity Master बनाएँ या संपादित करें",
+        "notFound": "No Mdm Activity Masters found"
+      },
+      "created": "एक नया Mdm Activity Master [identifier: {{ param }}] तैयार है",
+      "updated": "एक Mdm Activity Master [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Mdm Activity Master [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Mdm Activity Master [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Mdm Activity Master"
+      },
+      "activityCode": "Activity Code",
+      "activityName": "Activity Name",
+      "activityDesc": "Activity Desc",
+      "activityLevelId": "Activity Level Id",
+      "activityLevelDesc": "Activity Level Desc",
+      "organizationName": "Organization Name",
+      "activityStatus": "Activity Status",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "recordInsertTime": "Record Insert Time",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "organizationCode": "Organization Code"
+    }
+  }
+}
