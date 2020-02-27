@@ -1,0 +1,159 @@
+{
+    "name": "MdmMeesevaServiceMaster",
+    "fields": [
+        {
+            "fieldName": "syspk",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "meesevaServiceName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "isCharged",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "organizationEntityTypeCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "applicationTable",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "applicationObject",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "customerDefaultFlag",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "channelDefaultFlag",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serviceUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "backOfficeUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "packageId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "meesevaServiceActiveFlag",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "meesevaServiceGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "meesevaServiceSubGroupId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "meesevaServiceTypeId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "meesevaServiceSubTypeId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "departmentCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "efmsDepartmentCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isOnline",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "agencyType",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "launchDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "isMobile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "innerSubId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "digilockerEnabled",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isRegular",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isSeasonal",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "citizenPortalLaunchDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updatedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recordInsertTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "mdmServiceMaster",
+            "otherEntityRelationshipName": "mdmMeesevaServiceMaster",
+            "relationshipName": "meesevaServiceId",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20200227161100",
+    "entityTableName": "mdm_meeseva_service_master",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

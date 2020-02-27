@@ -1,0 +1,104 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mdmOrganizationMaster">
+            <h2><span jhiTranslate="onePortalApp.mdmOrganizationMaster.detail.title">Mdm Organization Master</span> {{ mdmOrganizationMaster.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.syspk">Syspk</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.syspk }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationCode">Organization Code</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.organizationCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationShortName">Organization Short Name</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.organizationShortName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationName">Organization Name</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.organizationName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationType">Organization Type</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.organizationType }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationDesc">Organization Desc</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.organizationDesc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.sectorCode">Sector Code</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.sectorCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.parentOrgCode">Parent Org Code</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.parentOrgCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationActiveFlag">Organization Active Flag</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.organizationActiveFlag }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.updatedBy">Updated By</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.updatedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.recordInsertTime">Record Insert Time</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.recordInsertTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.createTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.updateTime">Update Time</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.updateTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.startDate">Start Date</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.startDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.endDate">End Date</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.endDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationTypeDesc">Organization Type Desc</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.organizationTypeDesc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.jurisdictionType">Jurisdiction Type</span></dt>
+                <dd>
+                    <span>{{ mdmOrganizationMaster.jurisdictionType }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationCode">Organization Code</span></dt>
+                <dd>
+                    <div *ngIf="mdmOrganizationMaster.organizationCode">
+                        <a [routerLink]="['/mdm-employee-master', mdmOrganizationMaster.organizationCode?.id, 'view']">{{ mdmOrganizationMaster.organizationCode?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/mdm-organization-master', mdmOrganizationMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
