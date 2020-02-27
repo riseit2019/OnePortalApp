@@ -1,0 +1,239 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-mdm-meeseva-service-master-heading" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.home.createOrEditLabel">Create or edit a Mdm Meeseva Service Master</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.syspk" for="field_syspk">Syspk</label>
+                    <input type="number" class="form-control" name="syspk" id="field_syspk"
+                           formControlName="syspk"/>
+                    <div *ngIf="editForm.get('syspk')!.invalid && (editForm.get('syspk')!.dirty || editForm.get('syspk')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('syspk')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('syspk')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceName" for="field_meesevaServiceName">Meeseva Service Name</label>
+                    <input type="text" class="form-control" name="meesevaServiceName" id="field_meesevaServiceName"
+                           formControlName="meesevaServiceName"/>
+                    <div *ngIf="editForm.get('meesevaServiceName')!.invalid && (editForm.get('meesevaServiceName')!.dirty || editForm.get('meesevaServiceName')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('meesevaServiceName')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.isCharged" for="field_isCharged">Is Charged</label>
+                    <input type="text" class="form-control" name="isCharged" id="field_isCharged"
+                           formControlName="isCharged"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.organizationEntityTypeCode" for="field_organizationEntityTypeCode">Organization Entity Type Code</label>
+                    <input type="text" class="form-control" name="organizationEntityTypeCode" id="field_organizationEntityTypeCode"
+                           formControlName="organizationEntityTypeCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.applicationTable" for="field_applicationTable">Application Table</label>
+                    <input type="text" class="form-control" name="applicationTable" id="field_applicationTable"
+                           formControlName="applicationTable"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.applicationObject" for="field_applicationObject">Application Object</label>
+                    <input type="text" class="form-control" name="applicationObject" id="field_applicationObject"
+                           formControlName="applicationObject"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.customerDefaultFlag" for="field_customerDefaultFlag">Customer Default Flag</label>
+                    <input type="text" class="form-control" name="customerDefaultFlag" id="field_customerDefaultFlag"
+                           formControlName="customerDefaultFlag"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.channelDefaultFlag" for="field_channelDefaultFlag">Channel Default Flag</label>
+                    <input type="text" class="form-control" name="channelDefaultFlag" id="field_channelDefaultFlag"
+                           formControlName="channelDefaultFlag"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.serviceUrl" for="field_serviceUrl">Service Url</label>
+                    <input type="text" class="form-control" name="serviceUrl" id="field_serviceUrl"
+                           formControlName="serviceUrl"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.backOfficeUrl" for="field_backOfficeUrl">Back Office Url</label>
+                    <input type="text" class="form-control" name="backOfficeUrl" id="field_backOfficeUrl"
+                           formControlName="backOfficeUrl"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.packageId" for="field_packageId">Package Id</label>
+                    <input type="number" class="form-control" name="packageId" id="field_packageId"
+                           formControlName="packageId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceActiveFlag" for="field_meesevaServiceActiveFlag">Meeseva Service Active Flag</label>
+                    <input type="text" class="form-control" name="meesevaServiceActiveFlag" id="field_meesevaServiceActiveFlag"
+                           formControlName="meesevaServiceActiveFlag"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceGroupId" for="field_meesevaServiceGroupId">Meeseva Service Group Id</label>
+                    <input type="number" class="form-control" name="meesevaServiceGroupId" id="field_meesevaServiceGroupId"
+                           formControlName="meesevaServiceGroupId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceSubGroupId" for="field_meesevaServiceSubGroupId">Meeseva Service Sub Group Id</label>
+                    <input type="number" class="form-control" name="meesevaServiceSubGroupId" id="field_meesevaServiceSubGroupId"
+                           formControlName="meesevaServiceSubGroupId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceTypeId" for="field_meesevaServiceTypeId">Meeseva Service Type Id</label>
+                    <input type="number" class="form-control" name="meesevaServiceTypeId" id="field_meesevaServiceTypeId"
+                           formControlName="meesevaServiceTypeId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.meesevaServiceSubTypeId" for="field_meesevaServiceSubTypeId">Meeseva Service Sub Type Id</label>
+                    <input type="number" class="form-control" name="meesevaServiceSubTypeId" id="field_meesevaServiceSubTypeId"
+                           formControlName="meesevaServiceSubTypeId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.departmentCode" for="field_departmentCode">Department Code</label>
+                    <input type="text" class="form-control" name="departmentCode" id="field_departmentCode"
+                           formControlName="departmentCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.efmsDepartmentCode" for="field_efmsDepartmentCode">Efms Department Code</label>
+                    <input type="text" class="form-control" name="efmsDepartmentCode" id="field_efmsDepartmentCode"
+                           formControlName="efmsDepartmentCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.isOnline" for="field_isOnline">Is Online</label>
+                    <input type="text" class="form-control" name="isOnline" id="field_isOnline"
+                           formControlName="isOnline"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.agencyType" for="field_agencyType">Agency Type</label>
+                    <input type="number" class="form-control" name="agencyType" id="field_agencyType"
+                           formControlName="agencyType"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.launchDate" for="field_launchDate">Launch Date</label>
+                    <div class="d-flex">
+                        <input id="field_launchDate" type="datetime-local" class="form-control" name="launchDate" formControlName="launchDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.isMobile" for="field_isMobile">Is Mobile</label>
+                    <input type="text" class="form-control" name="isMobile" id="field_isMobile"
+                           formControlName="isMobile"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.innerSubId" for="field_innerSubId">Inner Sub Id</label>
+                    <input type="number" class="form-control" name="innerSubId" id="field_innerSubId"
+                           formControlName="innerSubId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.digilockerEnabled" for="field_digilockerEnabled">Digilocker Enabled</label>
+                    <input type="text" class="form-control" name="digilockerEnabled" id="field_digilockerEnabled"
+                           formControlName="digilockerEnabled"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.isRegular" for="field_isRegular">Is Regular</label>
+                    <input type="text" class="form-control" name="isRegular" id="field_isRegular"
+                           formControlName="isRegular"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.isSeasonal" for="field_isSeasonal">Is Seasonal</label>
+                    <input type="text" class="form-control" name="isSeasonal" id="field_isSeasonal"
+                           formControlName="isSeasonal"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.citizenPortalLaunchDate" for="field_citizenPortalLaunchDate">Citizen Portal Launch Date</label>
+                    <div class="d-flex">
+                        <input id="field_citizenPortalLaunchDate" type="datetime-local" class="form-control" name="citizenPortalLaunchDate" formControlName="citizenPortalLaunchDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.createdBy" for="field_createdBy">Created By</label>
+                    <input type="text" class="form-control" name="createdBy" id="field_createdBy"
+                           formControlName="createdBy"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.updatedBy" for="field_updatedBy">Updated By</label>
+                    <input type="text" class="form-control" name="updatedBy" id="field_updatedBy"
+                           formControlName="updatedBy"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.recordInsertTime" for="field_recordInsertTime">Record Insert Time</label>
+                    <div class="d-flex">
+                        <input id="field_recordInsertTime" type="datetime-local" class="form-control" name="recordInsertTime" formControlName="recordInsertTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" formControlName="createTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmMeesevaServiceMaster.updateTime" for="field_updateTime">Update Time</label>
+                    <div class="d-flex">
+                        <input id="field_updateTime" type="datetime-local" class="form-control" name="updateTime" formControlName="updateTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
