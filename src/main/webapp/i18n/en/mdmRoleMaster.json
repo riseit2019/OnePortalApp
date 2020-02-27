@@ -1,0 +1,39 @@
+{
+  "onePortalApp": {
+    "mdmRoleMaster": {
+      "home": {
+        "title": "Mdm Role Masters",
+        "createLabel": "Create a new Mdm Role Master",
+        "createOrEditLabel": "Create or edit a Mdm Role Master",
+        "notFound": "No Mdm Role Masters found"
+      },
+      "created": "A new Mdm Role Master is created with identifier {{ param }}",
+      "updated": "A Mdm Role Master is updated with identifier {{ param }}",
+      "deleted": "A Mdm Role Master is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mdm Role Master {{ id }}?"
+      },
+      "detail": {
+        "title": "Mdm Role Master"
+      },
+      "syspk": "Syspk",
+      "roleCode": "Role Code",
+      "roleName": "Role Name",
+      "roleDesc": "Role Desc",
+      "organizationName": "Organization Name",
+      "serviceCode": "Service Code",
+      "serviceName": "Service Name",
+      "locationCode": "Location Code",
+      "locationName": "Location Name",
+      "roleStatus": "Role Status",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "recordInsertTime": "Record Insert Time",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "roleLevelId": "Role Level Id",
+      "roleLevelDesc": "Role Level Desc",
+      "volunteerSecretariat": "Volunteer Secretariat"
+    }
+  }
+}
