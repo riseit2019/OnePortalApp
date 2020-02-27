@@ -1,0 +1,161 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-mdm-organization-master-heading" jhiTranslate="onePortalApp.mdmOrganizationMaster.home.createOrEditLabel">Create or edit a Mdm Organization Master</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.syspk" for="field_syspk">Syspk</label>
+                    <input type="number" class="form-control" name="syspk" id="field_syspk"
+                           formControlName="syspk"/>
+                    <div *ngIf="editForm.get('syspk')!.invalid && (editForm.get('syspk')!.dirty || editForm.get('syspk')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('syspk')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('syspk')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationCode" for="field_organizationCode">Organization Code</label>
+                    <input type="text" class="form-control" name="organizationCode" id="field_organizationCode"
+                           formControlName="organizationCode"/>
+                    <div *ngIf="editForm.get('organizationCode')!.invalid && (editForm.get('organizationCode')!.dirty || editForm.get('organizationCode')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('organizationCode')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationShortName" for="field_organizationShortName">Organization Short Name</label>
+                    <input type="text" class="form-control" name="organizationShortName" id="field_organizationShortName"
+                           formControlName="organizationShortName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationName" for="field_organizationName">Organization Name</label>
+                    <input type="text" class="form-control" name="organizationName" id="field_organizationName"
+                           formControlName="organizationName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationType" for="field_organizationType">Organization Type</label>
+                    <input type="text" class="form-control" name="organizationType" id="field_organizationType"
+                           formControlName="organizationType"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationDesc" for="field_organizationDesc">Organization Desc</label>
+                    <input type="text" class="form-control" name="organizationDesc" id="field_organizationDesc"
+                           formControlName="organizationDesc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.sectorCode" for="field_sectorCode">Sector Code</label>
+                    <input type="text" class="form-control" name="sectorCode" id="field_sectorCode"
+                           formControlName="sectorCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.parentOrgCode" for="field_parentOrgCode">Parent Org Code</label>
+                    <input type="text" class="form-control" name="parentOrgCode" id="field_parentOrgCode"
+                           formControlName="parentOrgCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationActiveFlag" for="field_organizationActiveFlag">Organization Active Flag</label>
+                    <input type="checkbox" class="form-control" name="organizationActiveFlag" id="field_organizationActiveFlag"
+                           formControlName="organizationActiveFlag"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.createdBy" for="field_createdBy">Created By</label>
+                    <input type="text" class="form-control" name="createdBy" id="field_createdBy"
+                           formControlName="createdBy"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.updatedBy" for="field_updatedBy">Updated By</label>
+                    <input type="text" class="form-control" name="updatedBy" id="field_updatedBy"
+                           formControlName="updatedBy"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.recordInsertTime" for="field_recordInsertTime">Record Insert Time</label>
+                    <div class="d-flex">
+                        <input id="field_recordInsertTime" type="datetime-local" class="form-control" name="recordInsertTime" formControlName="recordInsertTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" formControlName="createTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.updateTime" for="field_updateTime">Update Time</label>
+                    <div class="d-flex">
+                        <input id="field_updateTime" type="datetime-local" class="form-control" name="updateTime" formControlName="updateTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.startDate" for="field_startDate">Start Date</label>
+                    <div class="input-group">
+                        <input id="field_startDate" type="text" class="form-control" name="startDate" ngbDatepicker #startDateDp="ngbDatepicker" formControlName="startDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="startDateDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.endDate" for="field_endDate">End Date</label>
+                    <div class="input-group">
+                        <input id="field_endDate" type="text" class="form-control" name="endDate" ngbDatepicker #endDateDp="ngbDatepicker" formControlName="endDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="endDateDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.organizationTypeDesc" for="field_organizationTypeDesc">Organization Type Desc</label>
+                    <input type="text" class="form-control" name="organizationTypeDesc" id="field_organizationTypeDesc"
+                           formControlName="organizationTypeDesc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmOrganizationMaster.jurisdictionType" for="field_jurisdictionType">Jurisdiction Type</label>
+                    <input type="text" class="form-control" name="jurisdictionType" id="field_jurisdictionType"
+                           formControlName="jurisdictionType"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity MdmCitizenData.
+    -->
+    <changeSet id="20200227193800-1" author="jhipster">
+        <createTable tableName="mdm_citizen_data">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="syspk" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="person_id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="temp_ref_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="email_id" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mobile_number" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="date_of_birth" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="gender_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="gender" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="house_number_adh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="street_adh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="village_adh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="district_name_ah" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sub_district_name_adh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="post_office_adh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="state_name_adh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pin_code_adh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="district_code_pss" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="district_name_pss" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="district_code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mandal_code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="village_code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="district_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mandal_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="village_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="house_hold_id" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="relationship_with_hoh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="building_name_pss" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="house_name_ward_no_div_pss" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="area_ward_colony_street_pss" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="village_town_pss" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pin_code_pss" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="religion_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="religion" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="caste_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="caste" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sub_caste_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="sub_caste" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mother_tongue_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="mother_tongue" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="household_ownership_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="household_ownership" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="education_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="education" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="occupation_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="occupation" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="occupation_category_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="occupation_category" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="martial_status_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="martial_status" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="physicalhandicapped_type_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="physicalhandicapped_status" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="physicalhandicapped_percentage" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="voters_card_no" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="kissan_card_available" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="annual_income" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ration_id" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="created_by" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="updated_by" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="record_insert_time" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="create_time" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="update_time" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="aadhaar_verified" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="aadhaar_verified_date" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="email_verified" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="phone_no_verified" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="citizen_active_status" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="source_of_registration_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="source_of_registration" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sso_id" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="operator_id" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="aadhaar_ref_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="care_of_adh" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="assisted_mode_operator_id" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="uid_reference_key_aponline" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="uid_token" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="volunteer_secretariat_email_id" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="volunteer_secretariat_mobile" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="volunteer_secretariat_id" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        <dropDefaultValue tableName="mdm_citizen_data" columnName="record_insert_time" columnDataType="datetime"/>
+        <dropDefaultValue tableName="mdm_citizen_data" columnName="create_time" columnDataType="datetime"/>
+        <dropDefaultValue tableName="mdm_citizen_data" columnName="update_time" columnDataType="datetime"/>
+        <dropDefaultValue tableName="mdm_citizen_data" columnName="aadhaar_verified_date" columnDataType="datetime"/>
+    </changeSet>
+
+    <changeSet id="20200227193800-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20200227193800-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/mdm_citizen_data.csv"
+                  separator=";"
+                  tableName="mdm_citizen_data">
+            <column name="id" type="numeric"/>
+            <column name="syspk" type="numeric"/>
+            <column name="person_id" type="string"/>
+            <column name="temp_ref_id" type="numeric"/>
+            <column name="name" type="string"/>
+            <column name="email_id" type="string"/>
+            <column name="mobile_number" type="numeric"/>
+            <column name="date_of_birth" type="date"/>
+            <column name="gender_id" type="numeric"/>
+            <column name="gender" type="string"/>
+            <column name="house_number_adh" type="string"/>
+            <column name="street_adh" type="string"/>
+            <column name="village_adh" type="string"/>
+            <column name="district_name_ah" type="string"/>
+            <column name="sub_district_name_adh" type="string"/>
+            <column name="post_office_adh" type="string"/>
+            <column name="state_name_adh" type="string"/>
+            <column name="pin_code_adh" type="string"/>
+            <column name="district_code_pss" type="numeric"/>
+            <column name="district_name_pss" type="string"/>
+            <column name="district_code" type="string"/>
+            <column name="mandal_code" type="string"/>
+            <column name="village_code" type="string"/>
+            <column name="district_name" type="string"/>
+            <column name="mandal_name" type="string"/>
+            <column name="village_name" type="string"/>
+            <column name="house_hold_id" type="string"/>
+            <column name="relationship_with_hoh" type="string"/>
+            <column name="building_name_pss" type="string"/>
+            <column name="house_name_ward_no_div_pss" type="string"/>
+            <column name="area_ward_colony_street_pss" type="string"/>
+            <column name="village_town_pss" type="string"/>
+            <column name="pin_code_pss" type="string"/>
+            <column name="religion_id" type="numeric"/>
+            <column name="religion" type="string"/>
+            <column name="caste_id" type="numeric"/>
+            <column name="caste" type="string"/>
+            <column name="sub_caste_id" type="numeric"/>
+            <column name="sub_caste" type="string"/>
+            <column name="mother_tongue_id" type="numeric"/>
+            <column name="mother_tongue" type="string"/>
+            <column name="household_ownership_id" type="numeric"/>
+            <column name="household_ownership" type="string"/>
+            <column name="education_id" type="numeric"/>
+            <column name="education" type="string"/>
+            <column name="occupation_id" type="numeric"/>
+            <column name="occupation" type="string"/>
+            <column name="occupation_category_id" type="numeric"/>
+            <column name="occupation_category" type="string"/>
+            <column name="martial_status_id" type="numeric"/>
+            <column name="martial_status" type="string"/>
+            <column name="physicalhandicapped_type_id" type="numeric"/>
+            <column name="physicalhandicapped_status" type="string"/>
+            <column name="physicalhandicapped_percentage" type="numeric"/>
+            <column name="voters_card_no" type="string"/>
+            <column name="kissan_card_available" type="string"/>
+            <column name="annual_income" type="string"/>
+            <column name="ration_id" type="string"/>
+            <column name="created_by" type="string"/>
+            <column name="updated_by" type="string"/>
+            <column name="record_insert_time" type="datetime"/>
+            <column name="create_time" type="datetime"/>
+            <column name="update_time" type="datetime"/>
+            <column name="aadhaar_verified" type="string"/>
+            <column name="aadhaar_verified_date" type="datetime"/>
+            <column name="email_verified" type="string"/>
+            <column name="phone_no_verified" type="string"/>
+            <column name="citizen_active_status" type="string"/>
+            <column name="source_of_registration_id" type="numeric"/>
+            <column name="source_of_registration" type="string"/>
+            <column name="sso_id" type="string"/>
+            <column name="operator_id" type="string"/>
+            <column name="aadhaar_ref_id" type="numeric"/>
+            <column name="care_of_adh" type="string"/>
+            <column name="assisted_mode_operator_id" type="string"/>
+            <column name="uid_reference_key_aponline" type="numeric"/>
+            <column name="uid_token" type="string"/>
+            <column name="volunteer_secretariat_email_id" type="string"/>
+            <column name="volunteer_secretariat_mobile" type="numeric"/>
+            <column name="volunteer_secretariat_id" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>
