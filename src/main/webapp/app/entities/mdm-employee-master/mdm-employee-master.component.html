@@ -1,0 +1,159 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="onePortalApp.mdmEmployeeMaster.home.title">Mdm Employee Masters</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-mdm-employee-master" [routerLink]="['/mdm-employee-master/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="onePortalApp.mdmEmployeeMaster.home.createLabel">
+            Create a new Mdm Employee Master
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="mdmEmployeeMasters?.length === 0">
+        <span jhiTranslate="onePortalApp.mdmEmployeeMaster.home.notFound">No mdmEmployeeMasters found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="mdmEmployeeMasters?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.employeeCode">Employee Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.tempRefId">Temp Ref Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.personId">Person Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.employeeId">Employee Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.employeeName">Employee Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.entityName">Entity Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.organizationName">Organization Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.designationId">Designation Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.designationName">Designation Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.postName">Post Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.organizationUnitName">Organization Unit Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.parentOrganizationUnit">Parent Organization Unit</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.mobileNumber">Mobile Number</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.emailId">Email Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.addressType">Address Type</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.address1">Address 1</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.address2">Address 2</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.cityName">City Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.postOffice">Post Office</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.isPrimary">Is Primary</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.isOuHead">Is Ou Head</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.districtCode">District Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.districtName">District Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.mandalCode">Mandal Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.mandalName">Mandal Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.villageCode">Village Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.villageName">Village Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.panchayatCode">Panchayat Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.panchayatName">Panchayat Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.constituencyCode">Constituency Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.constituencyName">Constituency Name</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.createdBy">Created By</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.updatedBy">Updated By</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.recordInsertTime">Record Insert Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.createTime">Create Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.updateTime">Update Time</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.employeeType">Employee Type</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.managerEmployeeCode">Manager Employee Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.employeeActiveStatus">Employee Active Status</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.personId1">Person Id 1</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.aadhaarRefId">Aadhaar Ref Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.volunteerSecretariatId">Volunteer Secretariat Id</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.volunteerSecretariatFlag">Volunteer Secretariat Flag</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.aadhaarNumber">Aadhaar Number</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.organizationCode">Organization Code</span></th>
+                    <th scope="col" ><span jhiTranslate="onePortalApp.mdmEmployeeMaster.personId">Person Id</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mdmEmployeeMaster of mdmEmployeeMasters ;trackBy: trackId">
+                    <td><a [routerLink]="['/mdm-employee-master', mdmEmployeeMaster.id, 'view']">{{ mdmEmployeeMaster.id }}</a></td>
+                    <td>{{ mdmEmployeeMaster.employeeCode }}</td>
+                    <td>{{ mdmEmployeeMaster.tempRefId }}</td>
+                    <td>{{ mdmEmployeeMaster.personId }}</td>
+                    <td>{{ mdmEmployeeMaster.employeeId }}</td>
+                    <td>{{ mdmEmployeeMaster.employeeName }}</td>
+                    <td>{{ mdmEmployeeMaster.entityName }}</td>
+                    <td>{{ mdmEmployeeMaster.organizationName }}</td>
+                    <td>{{ mdmEmployeeMaster.designationId }}</td>
+                    <td>{{ mdmEmployeeMaster.designationName }}</td>
+                    <td>{{ mdmEmployeeMaster.postName }}</td>
+                    <td>{{ mdmEmployeeMaster.organizationUnitName }}</td>
+                    <td>{{ mdmEmployeeMaster.parentOrganizationUnit }}</td>
+                    <td>{{ mdmEmployeeMaster.mobileNumber }}</td>
+                    <td>{{ mdmEmployeeMaster.emailId }}</td>
+                    <td>{{ mdmEmployeeMaster.addressType }}</td>
+                    <td>{{ mdmEmployeeMaster.address1 }}</td>
+                    <td>{{ mdmEmployeeMaster.address2 }}</td>
+                    <td>{{ mdmEmployeeMaster.cityName }}</td>
+                    <td>{{ mdmEmployeeMaster.postOffice }}</td>
+                    <td>{{ mdmEmployeeMaster.isPrimary }}</td>
+                    <td>{{ mdmEmployeeMaster.isOuHead }}</td>
+                    <td>{{ mdmEmployeeMaster.districtCode }}</td>
+                    <td>{{ mdmEmployeeMaster.districtName }}</td>
+                    <td>{{ mdmEmployeeMaster.mandalCode }}</td>
+                    <td>{{ mdmEmployeeMaster.mandalName }}</td>
+                    <td>{{ mdmEmployeeMaster.villageCode }}</td>
+                    <td>{{ mdmEmployeeMaster.villageName }}</td>
+                    <td>{{ mdmEmployeeMaster.panchayatCode }}</td>
+                    <td>{{ mdmEmployeeMaster.panchayatName }}</td>
+                    <td>{{ mdmEmployeeMaster.constituencyCode }}</td>
+                    <td>{{ mdmEmployeeMaster.constituencyName }}</td>
+                    <td>{{ mdmEmployeeMaster.createdBy }}</td>
+                    <td>{{ mdmEmployeeMaster.updatedBy }}</td>
+                    <td>{{ mdmEmployeeMaster.recordInsertTime | date:'medium' }}</td>
+                    <td>{{ mdmEmployeeMaster.createTime | date:'medium' }}</td>
+                    <td>{{ mdmEmployeeMaster.updateTime | date:'medium' }}</td>
+                    <td>{{ mdmEmployeeMaster.employeeType }}</td>
+                    <td>{{ mdmEmployeeMaster.managerEmployeeCode }}</td>
+                    <td>{{ mdmEmployeeMaster.employeeActiveStatus }}</td>
+                    <td>{{ mdmEmployeeMaster.personId1 }}</td>
+                    <td>{{ mdmEmployeeMaster.aadhaarRefId }}</td>
+                    <td>{{ mdmEmployeeMaster.volunteerSecretariatId }}</td>
+                    <td>{{ mdmEmployeeMaster.volunteerSecretariatFlag }}</td>
+                    <td>{{ mdmEmployeeMaster.aadhaarNumber }}</td>
+                    <td>
+                        <div *ngIf="mdmEmployeeMaster.organizationCode">
+                            <a [routerLink]="['/mdm-organization-master', mdmEmployeeMaster.organizationCode?.id, 'view']" >{{ mdmEmployeeMaster.organizationCode?.id }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="mdmEmployeeMaster.personId">
+                            <a [routerLink]="['/mdm-citizen-data', mdmEmployeeMaster.personId?.id, 'view']" >{{ mdmEmployeeMaster.personId?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/mdm-employee-master', mdmEmployeeMaster.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/mdm-employee-master', mdmEmployeeMaster.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(mdmEmployeeMaster)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

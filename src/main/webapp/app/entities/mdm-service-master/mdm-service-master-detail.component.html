@@ -1,0 +1,258 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mdmServiceMaster">
+            <h2><span jhiTranslate="onePortalApp.mdmServiceMaster.detail.title">Mdm Service Master</span> {{ mdmServiceMaster.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.serviceCode">Service Code</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.serviceCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.organizationName">Organization Name</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.organizationName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.serviceShortName">Service Short Name</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.serviceShortName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.serviceName">Service Name</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.serviceName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.serviceDesc">Service Desc</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.serviceDesc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.parentServiceCode">Parent Service Code</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.parentServiceCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.servicePeriodStartDate">Service Period Start Date</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.servicePeriodStartDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.servicePeriodEndDate">Service Period End Date</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.servicePeriodEndDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.serviceCategory">Service Category</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.serviceCategory }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.serviceLink">Service Link</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.serviceLink }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.serviceClass">Service Class</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.serviceClass }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.serviceIntegrationType">Service Integration Type</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.serviceIntegrationType }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.serviceType">Service Type</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.serviceType }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.lookupRoleId">Lookup Role Id</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.lookupRoleId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.lookupRole">Lookup Role</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.lookupRole }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.lookupSectorId">Lookup Sector Id</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.lookupSectorId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.lookupSector">Lookup Sector</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.lookupSector }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.lookupLifeeventId">Lookup Lifeevent Id</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.lookupLifeeventId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.lookupLifeevent">Lookup Lifeevent</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.lookupLifeevent }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.slaGoal">Sla Goal</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.slaGoal }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.serviceActiveFlag">Service Active Flag</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.serviceActiveFlag }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.updatedBy">Updated By</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.updatedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.recordInsertTime">Record Insert Time</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.recordInsertTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.createTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.updateTime">Update Time</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.updateTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.sectionDisplayName">Section Display Name</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.sectionDisplayName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.sectionDisplayIcon">Section Display Icon</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.sectionDisplayIcon }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.rulesetName">Ruleset Name</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.rulesetName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.servicePriority">Service Priority</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.servicePriority }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.serviceChannelAccess">Service Channel Access</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.serviceChannelAccess }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.serviceAccess">Service Access</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.serviceAccess }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.assistedmodeekycReq">Assistedmodeekyc Req</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.assistedmodeekycReq }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.assistedOthAdrReq">Assisted Oth Adr Req</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.assistedOthAdrReq }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.slaDeadline">Sla Deadline</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.slaDeadline }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.paymentChannelId">Payment Channel Id</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.paymentChannelId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.paymentReturnClass">Payment Return Class</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.paymentReturnClass }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.paymentReturnRuleset">Payment Return Ruleset</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.paymentReturnRuleset }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.paymentReturnurl">Payment Returnurl</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.paymentReturnurl }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.helpLink">Help Link</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.helpLink }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.intermediateScreen">Intermediate Screen</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.intermediateScreen }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.aadhaarRequired">Aadhaar Required</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.aadhaarRequired }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.meesevaServiceId">Meeseva Service Id</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.meesevaServiceId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.meesevaServiceName">Meeseva Service Name</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.meesevaServiceName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtTotal">Pmt Fee Amt Total</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.pmtFeeAmtTotal }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers1">Pmt Fee Amt Others 1</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.pmtFeeAmtOthers1 }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers1Desc">Pmt Fee Amt Others 1 Desc</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.pmtFeeAmtOthers1Desc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers2">Pmt Fee Amt Others 2</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.pmtFeeAmtOthers2 }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers2Desc">Pmt Fee Amt Others 2 Desc</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.pmtFeeAmtOthers2Desc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers3">Pmt Fee Amt Others 3</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.pmtFeeAmtOthers3 }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers3Desc">Pmt Fee Amt Others 3 Desc</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.pmtFeeAmtOthers3Desc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers4">Pmt Fee Amt Others 4</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.pmtFeeAmtOthers4 }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers4Desc">Pmt Fee Amt Others 4 Desc</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.pmtFeeAmtOthers4Desc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers5">Pmt Fee Amt Others 5</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.pmtFeeAmtOthers5 }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers5Desc">Pmt Fee Amt Others 5 Desc</span></dt>
+                <dd>
+                    <span>{{ mdmServiceMaster.pmtFeeAmtOthers5Desc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.meesevaServiceId">Meeseva Service Id</span></dt>
+                <dd>
+                    <div *ngIf="mdmServiceMaster.meesevaServiceId">
+                        <a [routerLink]="['/mdm-meeseva-service-master', mdmServiceMaster.meesevaServiceId?.id, 'view']">{{ mdmServiceMaster.meesevaServiceId?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmServiceMaster.organizationCode">Organization Code</span></dt>
+                <dd>
+                    <div *ngIf="mdmServiceMaster.organizationCode">
+                        <a [routerLink]="['/mdm-organization-master', mdmServiceMaster.organizationCode?.id, 'view']">{{ mdmServiceMaster.organizationCode?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/mdm-service-master', mdmServiceMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

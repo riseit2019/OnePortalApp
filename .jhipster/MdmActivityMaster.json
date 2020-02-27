@@ -1,0 +1,96 @@
+{
+    "name": "MdmActivityMaster",
+    "fields": [
+        {
+            "fieldName": "activityCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "activityName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "activityDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "activityLevelId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "activityLevelDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "organizationCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "organizationName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "activityStatus",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updatedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recordInsertTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "mdmOrganizationMaster",
+            "otherEntityRelationshipName": "mdmActivityMaster",
+            "relationshipName": "organizationCode",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mdmOrganizationMaster",
+            "otherEntityRelationshipName": "mdmActivityMaster",
+            "relationshipName": "organizationCode",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200227102800",
+    "entityTableName": "mdm_activity_master",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

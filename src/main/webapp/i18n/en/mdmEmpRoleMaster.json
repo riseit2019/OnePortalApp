@@ -1,0 +1,51 @@
+{
+  "onePortalApp": {
+    "mdmEmpRoleMaster": {
+      "home": {
+        "title": "Mdm Emp Role Masters",
+        "createLabel": "Create a new Mdm Emp Role Master",
+        "createOrEditLabel": "Create or edit a Mdm Emp Role Master",
+        "notFound": "No Mdm Emp Role Masters found"
+      },
+      "created": "A new Mdm Emp Role Master is created with identifier {{ param }}",
+      "updated": "A Mdm Emp Role Master is updated with identifier {{ param }}",
+      "deleted": "A Mdm Emp Role Master is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mdm Emp Role Master {{ id }}?"
+      },
+      "detail": {
+        "title": "Mdm Emp Role Master"
+      },
+      "employeeCode": "Employee Code",
+      "employeeName": "Employee Name",
+      "roleCode": "Role Code",
+      "roleName": "Role Name",
+      "officeCode": "Office Code",
+      "officeName": "Office Name",
+      "personId": "Person Id",
+      "organizationName": "Organization Name",
+      "stateCode": "State Code",
+      "stateName": "State Name",
+      "districtCode": "District Code",
+      "districtName": "District Name",
+      "mandalCode": "Mandal Code",
+      "mandalName": "Mandal Name",
+      "villageCode": "Village Code",
+      "villageName": "Village Name",
+      "circleName": "Circle Name",
+      "divisionName": "Division Name",
+      "subDivisionName": "Sub Division Name",
+      "sectionName": "Section Name",
+      "activeStatusFlag": "Active Status Flag",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "recordInsertTime": "Record Insert Time",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "volunteerSecretariatRole": "Volunteer Secretariat Role",
+      "organizationCode": "Organization Code",
+      "employeeCode": "Employee Code",
+      "roleCode": "Role Code"
+    }
+  }
+}

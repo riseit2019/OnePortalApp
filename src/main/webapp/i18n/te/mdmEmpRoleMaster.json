@@ -1,0 +1,51 @@
+{
+  "onePortalApp": {
+    "mdmEmpRoleMaster": {
+      "home": {
+        "title": "Mdm Emp Role Masters",
+        "createLabel": "కొత్త Mdm Emp Role Master  సృష్టించండి",
+        "createOrEditLabel": "Mdm Emp Role Master సృష్టించండి లేదా సవరించండి",
+        "notFound": "No Mdm Emp Role Masters found"
+      },
+      "created": "{{ param }} ఐడీ తో ఒక కొత్త Mdm Emp Role Master సృష్టించబడినది",
+      "updated": "{{ param }} ఐడీ తో ఒక కొత్త Mdm Emp Role Master సవరించబడినది",
+      "deleted": "{{ param }} ఐడీ తో ఒక కొత్త Mdm Emp Role Master తొలగించబడినది",
+      "delete": {
+        "question": "మీరు Mdm Emp Role Master {{ id }} ఖచ్చితంగా తొలగించాలనుకుంటున్నారా?"
+      },
+      "detail": {
+        "title": "Mdm Emp Role Master"
+      },
+      "employeeCode": "Employee Code",
+      "employeeName": "Employee Name",
+      "roleCode": "Role Code",
+      "roleName": "Role Name",
+      "officeCode": "Office Code",
+      "officeName": "Office Name",
+      "personId": "Person Id",
+      "organizationName": "Organization Name",
+      "stateCode": "State Code",
+      "stateName": "State Name",
+      "districtCode": "District Code",
+      "districtName": "District Name",
+      "mandalCode": "Mandal Code",
+      "mandalName": "Mandal Name",
+      "villageCode": "Village Code",
+      "villageName": "Village Name",
+      "circleName": "Circle Name",
+      "divisionName": "Division Name",
+      "subDivisionName": "Sub Division Name",
+      "sectionName": "Section Name",
+      "activeStatusFlag": "Active Status Flag",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "recordInsertTime": "Record Insert Time",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "volunteerSecretariatRole": "Volunteer Secretariat Role",
+      "organizationCode": "Organization Code",
+      "employeeCode": "Employee Code",
+      "roleCode": "Role Code"
+    }
+  }
+}
