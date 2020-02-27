@@ -1,0 +1,94 @@
+{
+    "name": "MdmRoleMaster",
+    "fields": [
+        {
+            "fieldName": "syspk",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "roleCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "roleName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "roleDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "organizationName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serviceCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "serviceName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "locationCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "locationName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "roleStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updatedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recordInsertTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "roleLevelId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "roleLevelDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "volunteerSecretariat",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200227161200",
+    "entityTableName": "mdm_role_master",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
