@@ -1,0 +1,102 @@
+{
+    "name": "MdmOrganizationMaster",
+    "fields": [
+        {
+            "fieldName": "syspk",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "organizationShortName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "organizationName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "organizationType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "organizationDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sectorCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "parentOrgCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "organizationActiveFlag",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updatedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recordInsertTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "organizationTypeDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "jurisdictionType",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "mdmEmployeeMaster",
+            "otherEntityRelationshipName": "organizationCode",
+            "relationshipName": "organizationCode",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "mdmServiceMaster",
+            "otherEntityRelationshipName": "organizationCode",
+            "relationshipName": "organizationCode",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200227153300",
+    "entityTableName": "mdm_organization_master",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

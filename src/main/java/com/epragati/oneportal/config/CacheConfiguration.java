@@ -42,6 +42,15 @@ public class CacheConfiguration {
             createCache(cm, com.epragati.oneportal.domain.User.class.getName());
             createCache(cm, com.epragati.oneportal.domain.Authority.class.getName());
             createCache(cm, com.epragati.oneportal.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.epragati.oneportal.domain.MdmOrganizationMaster.class.getName());
+            createCache(cm, com.epragati.oneportal.domain.MdmCitizenData.class.getName());
+            createCache(cm, com.epragati.oneportal.domain.MdmServiceMaster.class.getName());
+            createCache(cm, com.epragati.oneportal.domain.MdmActivityMaster.class.getName());
+            createCache(cm, com.epragati.oneportal.domain.MdmEmployeeMaster.class.getName());
+            createCache(cm, com.epragati.oneportal.domain.MdmMeesevaServiceMaster.class.getName());
+            createCache(cm, com.epragati.oneportal.domain.MdmRoleMaster.class.getName());
+            createCache(cm, com.epragati.oneportal.domain.MdmEmpRoleMaster.class.getName());
+            createCache(cm, com.epragati.oneportal.domain.MdmRoleActivityMaster.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
