@@ -1,0 +1,141 @@
+{
+    "name": "MdmEmpRoleMaster",
+    "fields": [
+        {
+            "fieldName": "employeeName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "roleName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "officeCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "officeName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "personId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "organizationName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stateCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stateName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "districtCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "districtName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mandalCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mandalName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "villageCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "villageName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "circleName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "divisionName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "subDivisionName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sectionName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "activeStatusFlag",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "updatedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recordInsertTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "volunteerSecretariatRole",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mdmOrganizationMaster",
+            "otherEntityRelationshipName": "mdmEmpRoleMaster",
+            "relationshipName": "organizationCode",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mdmEmployeeMaster",
+            "otherEntityRelationshipName": "mdmEmpRoleMaster",
+            "relationshipName": "employeeCode",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mdmRoleMaster",
+            "otherEntityRelationshipName": "mdmEmpRoleMaster",
+            "relationshipName": "roleCode",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200227105100",
+    "entityTableName": "mdm_emp_role_master",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
