@@ -1,0 +1,86 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="mdmActivityMaster">
+            <h2><span jhiTranslate="onePortalApp.mdmActivityMaster.detail.title">Mdm Activity Master</span> {{ mdmActivityMaster.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.activityCode">Activity Code</span></dt>
+                <dd>
+                    <span>{{ mdmActivityMaster.activityCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.activityName">Activity Name</span></dt>
+                <dd>
+                    <span>{{ mdmActivityMaster.activityName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.activityDesc">Activity Desc</span></dt>
+                <dd>
+                    <span>{{ mdmActivityMaster.activityDesc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.activityLevelId">Activity Level Id</span></dt>
+                <dd>
+                    <span>{{ mdmActivityMaster.activityLevelId }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.activityLevelDesc">Activity Level Desc</span></dt>
+                <dd>
+                    <span>{{ mdmActivityMaster.activityLevelDesc }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.organizationName">Organization Name</span></dt>
+                <dd>
+                    <span>{{ mdmActivityMaster.organizationName }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.activityStatus">Activity Status</span></dt>
+                <dd>
+                    <span>{{ mdmActivityMaster.activityStatus }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.createdBy">Created By</span></dt>
+                <dd>
+                    <span>{{ mdmActivityMaster.createdBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.updatedBy">Updated By</span></dt>
+                <dd>
+                    <span>{{ mdmActivityMaster.updatedBy }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.recordInsertTime">Record Insert Time</span></dt>
+                <dd>
+                    <span>{{ mdmActivityMaster.recordInsertTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{ mdmActivityMaster.createTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.updateTime">Update Time</span></dt>
+                <dd>
+                    <span>{{ mdmActivityMaster.updateTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.organizationCode">Organization Code</span></dt>
+                <dd>
+                    <div *ngIf="mdmActivityMaster.organizationCode">
+                        <a [routerLink]="['/mdm-organization-master', mdmActivityMaster.organizationCode?.id, 'view']">{{ mdmActivityMaster.organizationCode?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="onePortalApp.mdmActivityMaster.organizationCode">Organization Code</span></dt>
+                <dd>
+                    <div *ngIf="mdmActivityMaster.organizationCode">
+                        <a [routerLink]="['/mdm-organization-master', mdmActivityMaster.organizationCode?.id, 'view']">{{ mdmActivityMaster.organizationCode?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/mdm-activity-master', mdmActivityMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

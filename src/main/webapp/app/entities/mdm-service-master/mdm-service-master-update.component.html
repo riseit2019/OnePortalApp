@@ -1,0 +1,387 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-mdm-service-master-heading" jhiTranslate="onePortalApp.mdmServiceMaster.home.createOrEditLabel">Create or edit a Mdm Service Master</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.serviceCode" for="field_serviceCode">Service Code</label>
+                    <input type="text" class="form-control" name="serviceCode" id="field_serviceCode"
+                           formControlName="serviceCode"/>
+                    <div *ngIf="editForm.get('serviceCode')!.invalid && (editForm.get('serviceCode')!.dirty || editForm.get('serviceCode')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('serviceCode')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.organizationName" for="field_organizationName">Organization Name</label>
+                    <input type="text" class="form-control" name="organizationName" id="field_organizationName"
+                           formControlName="organizationName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.serviceShortName" for="field_serviceShortName">Service Short Name</label>
+                    <input type="text" class="form-control" name="serviceShortName" id="field_serviceShortName"
+                           formControlName="serviceShortName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.serviceName" for="field_serviceName">Service Name</label>
+                    <input type="text" class="form-control" name="serviceName" id="field_serviceName"
+                           formControlName="serviceName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.serviceDesc" for="field_serviceDesc">Service Desc</label>
+                    <input type="text" class="form-control" name="serviceDesc" id="field_serviceDesc"
+                           formControlName="serviceDesc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.parentServiceCode" for="field_parentServiceCode">Parent Service Code</label>
+                    <input type="text" class="form-control" name="parentServiceCode" id="field_parentServiceCode"
+                           formControlName="parentServiceCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.servicePeriodStartDate" for="field_servicePeriodStartDate">Service Period Start Date</label>
+                    <div class="d-flex">
+                        <input id="field_servicePeriodStartDate" type="datetime-local" class="form-control" name="servicePeriodStartDate" formControlName="servicePeriodStartDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.servicePeriodEndDate" for="field_servicePeriodEndDate">Service Period End Date</label>
+                    <div class="d-flex">
+                        <input id="field_servicePeriodEndDate" type="datetime-local" class="form-control" name="servicePeriodEndDate" formControlName="servicePeriodEndDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.serviceCategory" for="field_serviceCategory">Service Category</label>
+                    <input type="text" class="form-control" name="serviceCategory" id="field_serviceCategory"
+                           formControlName="serviceCategory"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.serviceLink" for="field_serviceLink">Service Link</label>
+                    <input type="text" class="form-control" name="serviceLink" id="field_serviceLink"
+                           formControlName="serviceLink"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.serviceClass" for="field_serviceClass">Service Class</label>
+                    <input type="text" class="form-control" name="serviceClass" id="field_serviceClass"
+                           formControlName="serviceClass"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.serviceIntegrationType" for="field_serviceIntegrationType">Service Integration Type</label>
+                    <input type="text" class="form-control" name="serviceIntegrationType" id="field_serviceIntegrationType"
+                           formControlName="serviceIntegrationType"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.serviceType" for="field_serviceType">Service Type</label>
+                    <input type="text" class="form-control" name="serviceType" id="field_serviceType"
+                           formControlName="serviceType"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.lookupRoleId" for="field_lookupRoleId">Lookup Role Id</label>
+                    <input type="number" class="form-control" name="lookupRoleId" id="field_lookupRoleId"
+                           formControlName="lookupRoleId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.lookupRole" for="field_lookupRole">Lookup Role</label>
+                    <input type="text" class="form-control" name="lookupRole" id="field_lookupRole"
+                           formControlName="lookupRole"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.lookupSectorId" for="field_lookupSectorId">Lookup Sector Id</label>
+                    <input type="number" class="form-control" name="lookupSectorId" id="field_lookupSectorId"
+                           formControlName="lookupSectorId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.lookupSector" for="field_lookupSector">Lookup Sector</label>
+                    <input type="text" class="form-control" name="lookupSector" id="field_lookupSector"
+                           formControlName="lookupSector"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.lookupLifeeventId" for="field_lookupLifeeventId">Lookup Lifeevent Id</label>
+                    <input type="number" class="form-control" name="lookupLifeeventId" id="field_lookupLifeeventId"
+                           formControlName="lookupLifeeventId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.lookupLifeevent" for="field_lookupLifeevent">Lookup Lifeevent</label>
+                    <input type="text" class="form-control" name="lookupLifeevent" id="field_lookupLifeevent"
+                           formControlName="lookupLifeevent"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.slaGoal" for="field_slaGoal">Sla Goal</label>
+                    <input type="number" class="form-control" name="slaGoal" id="field_slaGoal"
+                           formControlName="slaGoal"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.serviceActiveFlag" for="field_serviceActiveFlag">Service Active Flag</label>
+                    <input type="number" class="form-control" name="serviceActiveFlag" id="field_serviceActiveFlag"
+                           formControlName="serviceActiveFlag"/>
+                    <div *ngIf="editForm.get('serviceActiveFlag')!.invalid && (editForm.get('serviceActiveFlag')!.dirty || editForm.get('serviceActiveFlag')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('serviceActiveFlag')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.get('serviceActiveFlag')?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.createdBy" for="field_createdBy">Created By</label>
+                    <input type="text" class="form-control" name="createdBy" id="field_createdBy"
+                           formControlName="createdBy"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.updatedBy" for="field_updatedBy">Updated By</label>
+                    <input type="text" class="form-control" name="updatedBy" id="field_updatedBy"
+                           formControlName="updatedBy"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.recordInsertTime" for="field_recordInsertTime">Record Insert Time</label>
+                    <div class="d-flex">
+                        <input id="field_recordInsertTime" type="datetime-local" class="form-control" name="recordInsertTime" formControlName="recordInsertTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" formControlName="createTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.updateTime" for="field_updateTime">Update Time</label>
+                    <div class="d-flex">
+                        <input id="field_updateTime" type="datetime-local" class="form-control" name="updateTime" formControlName="updateTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.sectionDisplayName" for="field_sectionDisplayName">Section Display Name</label>
+                    <input type="text" class="form-control" name="sectionDisplayName" id="field_sectionDisplayName"
+                           formControlName="sectionDisplayName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.sectionDisplayIcon" for="field_sectionDisplayIcon">Section Display Icon</label>
+                    <input type="text" class="form-control" name="sectionDisplayIcon" id="field_sectionDisplayIcon"
+                           formControlName="sectionDisplayIcon"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.rulesetName" for="field_rulesetName">Ruleset Name</label>
+                    <input type="text" class="form-control" name="rulesetName" id="field_rulesetName"
+                           formControlName="rulesetName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.servicePriority" for="field_servicePriority">Service Priority</label>
+                    <input type="number" class="form-control" name="servicePriority" id="field_servicePriority"
+                           formControlName="servicePriority"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.serviceChannelAccess" for="field_serviceChannelAccess">Service Channel Access</label>
+                    <input type="text" class="form-control" name="serviceChannelAccess" id="field_serviceChannelAccess"
+                           formControlName="serviceChannelAccess"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.serviceAccess" for="field_serviceAccess">Service Access</label>
+                    <input type="text" class="form-control" name="serviceAccess" id="field_serviceAccess"
+                           formControlName="serviceAccess"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.assistedmodeekycReq" for="field_assistedmodeekycReq">Assistedmodeekyc Req</label>
+                    <input type="text" class="form-control" name="assistedmodeekycReq" id="field_assistedmodeekycReq"
+                           formControlName="assistedmodeekycReq"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.assistedOthAdrReq" for="field_assistedOthAdrReq">Assisted Oth Adr Req</label>
+                    <input type="text" class="form-control" name="assistedOthAdrReq" id="field_assistedOthAdrReq"
+                           formControlName="assistedOthAdrReq"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.slaDeadline" for="field_slaDeadline">Sla Deadline</label>
+                    <input type="number" class="form-control" name="slaDeadline" id="field_slaDeadline"
+                           formControlName="slaDeadline"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.paymentChannelId" for="field_paymentChannelId">Payment Channel Id</label>
+                    <input type="number" class="form-control" name="paymentChannelId" id="field_paymentChannelId"
+                           formControlName="paymentChannelId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.paymentReturnClass" for="field_paymentReturnClass">Payment Return Class</label>
+                    <input type="text" class="form-control" name="paymentReturnClass" id="field_paymentReturnClass"
+                           formControlName="paymentReturnClass"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.paymentReturnRuleset" for="field_paymentReturnRuleset">Payment Return Ruleset</label>
+                    <input type="text" class="form-control" name="paymentReturnRuleset" id="field_paymentReturnRuleset"
+                           formControlName="paymentReturnRuleset"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.paymentReturnurl" for="field_paymentReturnurl">Payment Returnurl</label>
+                    <input type="text" class="form-control" name="paymentReturnurl" id="field_paymentReturnurl"
+                           formControlName="paymentReturnurl"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.helpLink" for="field_helpLink">Help Link</label>
+                    <input type="text" class="form-control" name="helpLink" id="field_helpLink"
+                           formControlName="helpLink"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.intermediateScreen" for="field_intermediateScreen">Intermediate Screen</label>
+                    <input type="text" class="form-control" name="intermediateScreen" id="field_intermediateScreen"
+                           formControlName="intermediateScreen"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.aadhaarRequired" for="field_aadhaarRequired">Aadhaar Required</label>
+                    <input type="text" class="form-control" name="aadhaarRequired" id="field_aadhaarRequired"
+                           formControlName="aadhaarRequired"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.meesevaServiceName" for="field_meesevaServiceName">Meeseva Service Name</label>
+                    <input type="text" class="form-control" name="meesevaServiceName" id="field_meesevaServiceName"
+                           formControlName="meesevaServiceName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtTotal" for="field_pmtFeeAmtTotal">Pmt Fee Amt Total</label>
+                    <input type="number" class="form-control" name="pmtFeeAmtTotal" id="field_pmtFeeAmtTotal"
+                           formControlName="pmtFeeAmtTotal"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers1" for="field_pmtFeeAmtOthers1">Pmt Fee Amt Others 1</label>
+                    <input type="number" class="form-control" name="pmtFeeAmtOthers1" id="field_pmtFeeAmtOthers1"
+                           formControlName="pmtFeeAmtOthers1"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers1Desc" for="field_pmtFeeAmtOthers1Desc">Pmt Fee Amt Others 1 Desc</label>
+                    <input type="text" class="form-control" name="pmtFeeAmtOthers1Desc" id="field_pmtFeeAmtOthers1Desc"
+                           formControlName="pmtFeeAmtOthers1Desc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers2" for="field_pmtFeeAmtOthers2">Pmt Fee Amt Others 2</label>
+                    <input type="number" class="form-control" name="pmtFeeAmtOthers2" id="field_pmtFeeAmtOthers2"
+                           formControlName="pmtFeeAmtOthers2"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers2Desc" for="field_pmtFeeAmtOthers2Desc">Pmt Fee Amt Others 2 Desc</label>
+                    <input type="text" class="form-control" name="pmtFeeAmtOthers2Desc" id="field_pmtFeeAmtOthers2Desc"
+                           formControlName="pmtFeeAmtOthers2Desc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers3" for="field_pmtFeeAmtOthers3">Pmt Fee Amt Others 3</label>
+                    <input type="number" class="form-control" name="pmtFeeAmtOthers3" id="field_pmtFeeAmtOthers3"
+                           formControlName="pmtFeeAmtOthers3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers3Desc" for="field_pmtFeeAmtOthers3Desc">Pmt Fee Amt Others 3 Desc</label>
+                    <input type="text" class="form-control" name="pmtFeeAmtOthers3Desc" id="field_pmtFeeAmtOthers3Desc"
+                           formControlName="pmtFeeAmtOthers3Desc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers4" for="field_pmtFeeAmtOthers4">Pmt Fee Amt Others 4</label>
+                    <input type="number" class="form-control" name="pmtFeeAmtOthers4" id="field_pmtFeeAmtOthers4"
+                           formControlName="pmtFeeAmtOthers4"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers4Desc" for="field_pmtFeeAmtOthers4Desc">Pmt Fee Amt Others 4 Desc</label>
+                    <input type="text" class="form-control" name="pmtFeeAmtOthers4Desc" id="field_pmtFeeAmtOthers4Desc"
+                           formControlName="pmtFeeAmtOthers4Desc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers5" for="field_pmtFeeAmtOthers5">Pmt Fee Amt Others 5</label>
+                    <input type="number" class="form-control" name="pmtFeeAmtOthers5" id="field_pmtFeeAmtOthers5"
+                           formControlName="pmtFeeAmtOthers5"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.pmtFeeAmtOthers5Desc" for="field_pmtFeeAmtOthers5Desc">Pmt Fee Amt Others 5 Desc</label>
+                    <input type="text" class="form-control" name="pmtFeeAmtOthers5Desc" id="field_pmtFeeAmtOthers5Desc"
+                           formControlName="pmtFeeAmtOthers5Desc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.meesevaServiceId" for="field_meesevaServiceId">Meeseva Service Id</label>
+                    <select class="form-control" id="field_meesevaServiceId" name="meesevaServiceId" formControlName="meesevaServiceId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="mdmMeesevaServiceMasterOption.id === editForm.get('meesevaServiceId')!.value?.id ? editForm.get('meesevaServiceId')!.value : mdmMeesevaServiceMasterOption" *ngFor="let mdmMeesevaServiceMasterOption of meesevaserviceids; trackBy: trackById">{{ mdmMeesevaServiceMasterOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmServiceMaster.organizationCode" for="field_organizationCode">Organization Code</label>
+                    <select class="form-control" id="field_organizationCode" name="organizationCode" formControlName="organizationCode">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="mdmOrganizationMasterOption.id === editForm.get('organizationCode')!.value?.id ? editForm.get('organizationCode')!.value : mdmOrganizationMasterOption" *ngFor="let mdmOrganizationMasterOption of organizationcodes; trackBy: trackById">{{ mdmOrganizationMasterOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
