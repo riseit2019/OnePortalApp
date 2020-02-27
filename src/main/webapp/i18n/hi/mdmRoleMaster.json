@@ -1,0 +1,38 @@
+{
+  "onePortalApp": {
+    "mdmRoleMaster": {
+      "home": {
+        "title": "MdmRoleMasters",
+        "createLabel": "नया Mdm Role Master बनाएँ",
+        "createOrEditLabel": "Mdm Role Master बनाएँ या संपादित करें",
+        "notFound": "No Mdm Role Masters found"
+      },
+      "created": "एक नया Mdm Role Master [identifier: {{ param }}] तैयार है",
+      "updated": "एक Mdm Role Master [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Mdm Role Master [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Mdm Role Master [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Mdm Role Master"
+      },
+      "roleCode": "Role Code",
+      "roleName": "Role Name",
+      "roleDesc": "Role Desc",
+      "organizationName": "Organization Name",
+      "serviceCode": "Service Code",
+      "serviceName": "Service Name",
+      "locationCode": "Location Code",
+      "locationName": "Location Name",
+      "roleStatus": "Role Status",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "recordInsertTime": "Record Insert Time",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "roleLevelId": "Role Level Id",
+      "roleLevelDesc": "Role Level Desc",
+      "volunteerSecretariat": "Volunteer Secretariat"
+    }
+  }
+}

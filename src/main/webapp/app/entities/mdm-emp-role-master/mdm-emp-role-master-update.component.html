@@ -1,0 +1,209 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-mdm-emp-role-master-heading" jhiTranslate="onePortalApp.mdmEmpRoleMaster.home.createOrEditLabel">Create or edit a Mdm Emp Role Master</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.employeeName" for="field_employeeName">Employee Name</label>
+                    <input type="text" class="form-control" name="employeeName" id="field_employeeName"
+                           formControlName="employeeName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.roleName" for="field_roleName">Role Name</label>
+                    <input type="text" class="form-control" name="roleName" id="field_roleName"
+                           formControlName="roleName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.officeCode" for="field_officeCode">Office Code</label>
+                    <input type="text" class="form-control" name="officeCode" id="field_officeCode"
+                           formControlName="officeCode"/>
+                    <div *ngIf="editForm.get('officeCode')!.invalid && (editForm.get('officeCode')!.dirty || editForm.get('officeCode')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('officeCode')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.officeName" for="field_officeName">Office Name</label>
+                    <input type="text" class="form-control" name="officeName" id="field_officeName"
+                           formControlName="officeName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.personId" for="field_personId">Person Id</label>
+                    <input type="text" class="form-control" name="personId" id="field_personId"
+                           formControlName="personId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.organizationName" for="field_organizationName">Organization Name</label>
+                    <input type="text" class="form-control" name="organizationName" id="field_organizationName"
+                           formControlName="organizationName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.stateCode" for="field_stateCode">State Code</label>
+                    <input type="text" class="form-control" name="stateCode" id="field_stateCode"
+                           formControlName="stateCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.stateName" for="field_stateName">State Name</label>
+                    <input type="text" class="form-control" name="stateName" id="field_stateName"
+                           formControlName="stateName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.districtCode" for="field_districtCode">District Code</label>
+                    <input type="text" class="form-control" name="districtCode" id="field_districtCode"
+                           formControlName="districtCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.districtName" for="field_districtName">District Name</label>
+                    <input type="text" class="form-control" name="districtName" id="field_districtName"
+                           formControlName="districtName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.mandalCode" for="field_mandalCode">Mandal Code</label>
+                    <input type="text" class="form-control" name="mandalCode" id="field_mandalCode"
+                           formControlName="mandalCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.mandalName" for="field_mandalName">Mandal Name</label>
+                    <input type="text" class="form-control" name="mandalName" id="field_mandalName"
+                           formControlName="mandalName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.villageCode" for="field_villageCode">Village Code</label>
+                    <input type="text" class="form-control" name="villageCode" id="field_villageCode"
+                           formControlName="villageCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.villageName" for="field_villageName">Village Name</label>
+                    <input type="text" class="form-control" name="villageName" id="field_villageName"
+                           formControlName="villageName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.circleName" for="field_circleName">Circle Name</label>
+                    <input type="text" class="form-control" name="circleName" id="field_circleName"
+                           formControlName="circleName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.divisionName" for="field_divisionName">Division Name</label>
+                    <input type="text" class="form-control" name="divisionName" id="field_divisionName"
+                           formControlName="divisionName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.subDivisionName" for="field_subDivisionName">Sub Division Name</label>
+                    <input type="text" class="form-control" name="subDivisionName" id="field_subDivisionName"
+                           formControlName="subDivisionName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.sectionName" for="field_sectionName">Section Name</label>
+                    <input type="text" class="form-control" name="sectionName" id="field_sectionName"
+                           formControlName="sectionName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.activeStatusFlag" for="field_activeStatusFlag">Active Status Flag</label>
+                    <input type="number" class="form-control" name="activeStatusFlag" id="field_activeStatusFlag"
+                           formControlName="activeStatusFlag"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.createdBy" for="field_createdBy">Created By</label>
+                    <input type="text" class="form-control" name="createdBy" id="field_createdBy"
+                           formControlName="createdBy"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.updatedBy" for="field_updatedBy">Updated By</label>
+                    <input type="text" class="form-control" name="updatedBy" id="field_updatedBy"
+                           formControlName="updatedBy"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.recordInsertTime" for="field_recordInsertTime">Record Insert Time</label>
+                    <div class="d-flex">
+                        <input id="field_recordInsertTime" type="datetime-local" class="form-control" name="recordInsertTime" formControlName="recordInsertTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" formControlName="createTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.updateTime" for="field_updateTime">Update Time</label>
+                    <div class="d-flex">
+                        <input id="field_updateTime" type="datetime-local" class="form-control" name="updateTime" formControlName="updateTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.volunteerSecretariatRole" for="field_volunteerSecretariatRole">Volunteer Secretariat Role</label>
+                    <input type="text" class="form-control" name="volunteerSecretariatRole" id="field_volunteerSecretariatRole"
+                           formControlName="volunteerSecretariatRole"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.organizationCode" for="field_organizationCode">Organization Code</label>
+                    <select class="form-control" id="field_organizationCode" name="organizationCode" formControlName="organizationCode">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="mdmOrganizationMasterOption.id === editForm.get('organizationCode')!.value?.id ? editForm.get('organizationCode')!.value : mdmOrganizationMasterOption" *ngFor="let mdmOrganizationMasterOption of mdmorganizationmasters; trackBy: trackById">{{ mdmOrganizationMasterOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.employeeCode" for="field_employeeCode">Employee Code</label>
+                    <select class="form-control" id="field_employeeCode" name="employeeCode" formControlName="employeeCode">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="mdmEmployeeMasterOption.id === editForm.get('employeeCode')!.value?.id ? editForm.get('employeeCode')!.value : mdmEmployeeMasterOption" *ngFor="let mdmEmployeeMasterOption of mdmemployeemasters; trackBy: trackById">{{ mdmEmployeeMasterOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onePortalApp.mdmEmpRoleMaster.roleCode" for="field_roleCode">Role Code</label>
+                    <select class="form-control" id="field_roleCode" name="roleCode" formControlName="roleCode">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="mdmRoleMasterOption.id === editForm.get('roleCode')!.value?.id ? editForm.get('roleCode')!.value : mdmRoleMasterOption" *ngFor="let mdmRoleMasterOption of mdmrolemasters; trackBy: trackById">{{ mdmRoleMasterOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

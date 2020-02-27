@@ -1,0 +1,40 @@
+{
+  "onePortalApp": {
+    "mdmOrganizationMaster": {
+      "home": {
+        "title": "Mdm Organization Masters",
+        "createLabel": "Create a new Mdm Organization Master",
+        "createOrEditLabel": "Create or edit a Mdm Organization Master",
+        "notFound": "No Mdm Organization Masters found"
+      },
+      "created": "A new Mdm Organization Master is created with identifier {{ param }}",
+      "updated": "A Mdm Organization Master is updated with identifier {{ param }}",
+      "deleted": "A Mdm Organization Master is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mdm Organization Master {{ id }}?"
+      },
+      "detail": {
+        "title": "Mdm Organization Master"
+      },
+      "organizationCode": "Organization Code",
+      "organizationShortName": "Organization Short Name",
+      "organizationName": "Organization Name",
+      "organizationType": "Organization Type",
+      "organizationDesc": "Organization Desc",
+      "sectorCode": "Sector Code",
+      "parentOrgCode": "Parent Org Code",
+      "organizationActiveFlag": "Organization Active Flag",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "recordInsertTime": "Record Insert Time",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "organizationTypeDesc": "Organization Type Desc",
+      "jurisdictionType": "Jurisdiction Type",
+      "organizationCode": "Organization Code",
+      "organizationCode": "Organization Code"
+    }
+  }
+}
