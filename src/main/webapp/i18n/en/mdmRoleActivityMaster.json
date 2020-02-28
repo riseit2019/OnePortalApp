@@ -1,0 +1,37 @@
+{
+  "onePortalApp": {
+    "mdmRoleActivityMaster": {
+      "home": {
+        "title": "Mdm Role Activity Masters",
+        "createLabel": "Create a new Mdm Role Activity Master",
+        "createOrEditLabel": "Create or edit a Mdm Role Activity Master",
+        "notFound": "No Mdm Role Activity Masters found"
+      },
+      "created": "A new Mdm Role Activity Master is created with identifier {{ param }}",
+      "updated": "A Mdm Role Activity Master is updated with identifier {{ param }}",
+      "deleted": "A Mdm Role Activity Master is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mdm Role Activity Master {{ id }}?"
+      },
+      "detail": {
+        "title": "Mdm Role Activity Master"
+      },
+      "syspk": "Syspk",
+      "activityName": "Activity Name",
+      "activityLevelId": "Activity Level Id",
+      "activityLevelDesc": "Activity Level Desc",
+      "roleCode": "Role Code",
+      "roleName": "Role Name",
+      "roleLevelId": "Role Level Id",
+      "roleLevelDesc": "Role Level Desc",
+      "roleActivityStatus": "Role Activity Status",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "recordInsertTime": "Record Insert Time",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "activityCode": "Activity Code",
+      "roleCode": "Role Code"
+    }
+  }
+}

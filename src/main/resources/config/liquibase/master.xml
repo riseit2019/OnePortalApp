@@ -14,6 +14,20 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228034600_added_entity_MdmOrganizationMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228034700_added_entity_MdmCitizenData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228034800_added_entity_MdmServiceMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228034900_added_entity_MdmActivityMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228035000_added_entity_MdmEmployeeMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228035100_added_entity_MdmMeesevaServiceMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228035200_added_entity_MdmRoleMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228035300_added_entity_MdmEmpRoleMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228035400_added_entity_MdmRoleActivityMaster.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20200228034800_added_entity_constraints_MdmServiceMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228034900_added_entity_constraints_MdmActivityMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228035000_added_entity_constraints_MdmEmployeeMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228035300_added_entity_constraints_MdmEmpRoleMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200228035400_added_entity_constraints_MdmRoleActivityMaster.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>
