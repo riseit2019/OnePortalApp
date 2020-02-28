@@ -1,0 +1,55 @@
+{
+  "onePortalApp": {
+    "mdmMeesevaServiceMaster": {
+      "home": {
+        "title": "Mdm Meeseva Service Masters",
+        "createLabel": "కొత్త Mdm Meeseva Service Master  సృష్టించండి",
+        "createOrEditLabel": "Mdm Meeseva Service Master సృష్టించండి లేదా సవరించండి",
+        "notFound": "No Mdm Meeseva Service Masters found"
+      },
+      "created": "{{ param }} ఐడీ తో ఒక కొత్త Mdm Meeseva Service Master సృష్టించబడినది",
+      "updated": "{{ param }} ఐడీ తో ఒక కొత్త Mdm Meeseva Service Master సవరించబడినది",
+      "deleted": "{{ param }} ఐడీ తో ఒక కొత్త Mdm Meeseva Service Master తొలగించబడినది",
+      "delete": {
+        "question": "మీరు Mdm Meeseva Service Master {{ id }} ఖచ్చితంగా తొలగించాలనుకుంటున్నారా?"
+      },
+      "detail": {
+        "title": "Mdm Meeseva Service Master"
+      },
+      "syspk": "Syspk",
+      "meesevaServiceId": "Meeseva Service Id",
+      "meesevaServiceName": "Meeseva Service Name",
+      "isCharged": "Is Charged",
+      "organizationEntityTypeCode": "Organization Entity Type Code",
+      "applicationTable": "Application Table",
+      "applicationObject": "Application Object",
+      "customerDefaultFlag": "Customer Default Flag",
+      "channelDefaultFlag": "Channel Default Flag",
+      "serviceUrl": "Service Url",
+      "backOfficeUrl": "Back Office Url",
+      "packageId": "Package Id",
+      "meesevaServiceActiveFlag": "Meeseva Service Active Flag",
+      "meesevaServiceGroupId": "Meeseva Service Group Id",
+      "meesevaServiceSubGroupId": "Meeseva Service Sub Group Id",
+      "meesevaServiceTypeId": "Meeseva Service Type Id",
+      "meesevaServiceSubTypeId": "Meeseva Service Sub Type Id",
+      "departmentCode": "Department Code",
+      "efmsDepartmentCode": "Efms Department Code",
+      "isOnline": "Is Online",
+      "agencyType": "Agency Type",
+      "launchDate": "Launch Date",
+      "isMobile": "Is Mobile",
+      "innerSubId": "Inner Sub Id",
+      "digilockerEnabled": "Digilocker Enabled",
+      "isRegular": "Is Regular",
+      "isSeasonal": "Is Seasonal",
+      "citizenPortalLaunchDate": "Citizen Portal Launch Date",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "recordInsertTime": "Record Insert Time",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "meesevaServiceId": "Meeseva Service Id"
+    }
+  }
+}
